@@ -1,0 +1,2097 @@
+{
+  "info": {
+    "details": "",
+    "highlights": {
+      "javascript": {
+        "count": 26,
+        "synonymous": [
+          "javascript",
+          "js"
+        ]
+      },
+      "github": {
+        "count": 23,
+        "synonymous": [
+          "github"
+        ]
+      },
+      "component": {
+        "count": 20,
+        "synonymous": [
+          "component",
+          "components",
+          "componente",
+          "componentes"
+        ]
+      },
+      "react": {
+        "count": 19,
+        "synonymous": [
+          "react"
+        ]
+      },
+      "styled": {
+        "count": 17,
+        "synonymous": [
+          "styled",
+          "styleds",
+          "estilo",
+          "estilos"
+        ]
+      },
+      "graphql": {
+        "count": 10,
+        "synonymous": [
+          "graphql"
+        ]
+      },
+      "reasonml": {
+        "count": 9,
+        "synonymous": [
+          "reasonml"
+        ]
+      },
+      "open source": {
+        "count": 8,
+        "synonymous": [
+          "open source"
+        ]
+      },
+      "book": {
+        "count": 5,
+        "synonymous": [
+          "book",
+          "books",
+          "livro",
+          "livros"
+        ]
+      },
+      "flow": {
+        "count": 5,
+        "synonymous": [
+          "flow"
+        ]
+      },
+      "native": {
+        "count": 5,
+        "synonymous": [
+          "native"
+        ]
+      },
+      "fullstack": {
+        "count": 4,
+        "synonymous": [
+          "fullstack"
+        ]
+      },
+      "relay": {
+        "count": 4,
+        "synonymous": [
+          "relay"
+        ]
+      },
+      "meteor": {
+        "count": 4,
+        "synonymous": [
+          "meteor"
+        ]
+      },
+      "css": {
+        "count": 4,
+        "synonymous": [
+          "css"
+        ]
+      },
+      "apollo": {
+        "count": 3,
+        "synonymous": [
+          "apollo"
+        ]
+      },
+      "mobile": {
+        "count": 3,
+        "synonymous": [
+          "mobile"
+        ]
+      },
+      "async": {
+        "count": 3,
+        "synonymous": [
+          "async"
+        ]
+      },
+      "babel": {
+        "count": 2,
+        "synonymous": [
+          "babel"
+        ]
+      },
+      "redux": {
+        "count": 2,
+        "synonymous": [
+          "redux"
+        ]
+      },
+      "web": {
+        "count": 2,
+        "synonymous": [
+          "web"
+        ]
+      },
+      "test": {
+        "count": 1,
+        "synonymous": [
+          "test",
+          "teste"
+        ]
+      }
+    },
+    "authors": [
+      "Bruno Gama",
+      "Jabur",
+      "Nic",
+      "Vinicius Rangel",
+      "adelgado",
+      "brunolemos",
+      "dexfs",
+      "gabriel.ml",
+      "guilhermedecampo",
+      "hnordt",
+      "jcm",
+      "joao",
+      "matheus_gsilva",
+      "nicholasess",
+      "patrick",
+      "raphox",
+      "rocali",
+      "sibelius",
+      "tgmarinho",
+      "tiagocedrim",
+      "tiagosouto",
+      "vcapretz",
+      "willian",
+      "xereda"
+    ]
+  },
+  "messages": [
+    {
+      "id": "b4b19741-b961-4b78-a6c1-a333f0577736",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:01 PM",
+      "msg": "<p>mongodb ou postgres (sql related) ?</p>\n",
+      "messages": [
+        {
+          "id": "0f759ccd-bf9c-4306-9f1b-82572bf4c36f",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>atualmente ando preferindo postgres</p>\n<p>aggregations are just better ™️</p>\n<p>e com ocaml fica melhor de trabalhar pq os tipos podem ser inferidos com ppx</p>\n<p>e com reason tb</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "752ee9b4-9da8-403b-b77d-f0ed72dd6eff",
+          "img": null,
+          "username": "raphox",
+          "time": "18 hours ago",
+          "msg": "<p>poxa. pra mim isso é grego.</p>\n<p>se não for muito trabalho. tem como linkar referências?</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "74d67f58-dc3d-4c19-a03f-f7aa9c3f41eb",
+          "img": null,
+          "username": "Vinicius Rangel",
+          "time": "18 hours ago",
+          "msg": "<p>precisa ser postgres ou vc usou como referência para um sql?</p>\n<p>o oracle tem a versão free de 10gb, é bem bom</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "3c3b9049-6d0e-442a-a360-cd4112f7e238",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "9 hours ago",
+          "msg": "<p>opa, só vi aqui a agora, acho que vale a pena continuar a thread um pouco</p>\n<p>por exemplo, se vc tem uma query do tipo em js</p>\n<p><code>pg.query(&quot;insert app_users (name) values ($1)&quot;, [name]);</code></p>\n<p>o <code>name</code> no tb é uma row definada como string, mas o que te previne tentar adicionar um int ali ou um valor nulo pra descobrir que deu pau somente em runtime?</p>\n<p>ppx é uma ferramenta de ocaml que permite &quot;reescrever&quot; em tempo de compilação um código, no caso existe uma ppx que permite vc ler a schema do seu banco de dados e garantir que vc esteja adicionando os valores corretos na hora de dar um insert ou update tornando impossível tentar adicionar um dado incorreto no banco</p>\n<p>é o mesmo que acontece com a ppx de graphql, que torna impossível escrever e consumir uma query de forma errada</p>\n<p>refs</p>\n<p><a href=\"https://github.com/mhallin/graphql_ppx\">https://github.com/mhallin/graphql_ppx</a></p>\n<p><a href=\"https://github.com/darioteixeira/pgocaml\">https://github.com/darioteixeira/pgocaml</a> (Não foi escrito em ppx, mas no &quot;predecessor&quot;, o camlp4)</p>\n<p><a href=\"http://ocamllabs.io/doc/ppx.html\">http://ocamllabs.io/doc/ppx.html</a></p>\n<p>com ppx vc consegue alterar a sintaxe do ocaml, gerar tipos novos, adicionar novos errors no compilador etc</p>\n<p>o Reason e o ReasonReact são ppxs de ocaml, ou seja, ocaml reescrito em tempo de compilação e com sintaxe alterada</p>\n<blockquote>\n<p>GitHub<br/>mhallin/graphql_ppx<br/>graphql_ppx - GraphQL PPX rewriter for Bucklescript/ReasonML</p>\n</blockquote>\n<blockquote>\n<p>GitHub<br/>darioteixeira/pgocaml<br/>pgocaml - PG&#39;OCaml provides an interface to PostgreSQL databases for OCaml applications. It uses Camlp4 to extend the OCaml syntax, enabling one to directly embed SQL statements inside the OCam...</p>\n</blockquote>\n<blockquote>\n<p>ocamllabs.io<br/>PPX<br/>The PPX language feature provides a new API for syntactic extensions in OCaml. PPX uses attributes to allow type-driven code generation, extension nodes for ...</p>\n</blockquote>\n<p><a href=\"https://react-brasil.slack.com/archives/C1EDVPBQC/p1526058247000578?thread_ts=1526058113.000019&amp;cid=C1EDVPBQC\">https://react-brasil.slack.com/archives/C1EDVPBQC/p1526058247000578?thread_ts=1526058113.000019&amp;cid=C1EDVPBQC</a></p>\n<p>não é limitado apenas a postgres, dá pra adaptar pra outros sqls tb, não sei se tem algum bem polido pra outros</p>\n<p>Vinicius Rangel</p>\n<p>precisa ser postgres ou vc usou como referência para um sql?</p>\n<p>From a thread in #generalYesterday at 2:04 PM</p>\n",
+          "highlights": "github graphql javascript js react reasonml"
+        },
+        {
+          "id": "60dab04d-6d84-46a3-905b-04db67846b42",
+          "img": null,
+          "username": "sibelius",
+          "time": "8 hours ago",
+          "msg": "<p>Ppx nada mais é que macros</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "9d8e1eb0-0331-48a5-a9ca-4d67fa4676c8",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "8 hours ago",
+          "msg": "<p>acho que no caso do ocaml, com uma sintaxe mais rígida, vai mais além pq vc pode criar novas sintaxes e não só gerar código, que é o que eles chamam de extension points</p>\n<p><a href=\"https://whitequark.org/blog/2014/04/16/a-guide-to-extension-points-in-ocaml/\">https://whitequark.org/blog/2014/04/16/a-guide-to-extension-points-in-ocaml/</a></p>\n<p><a href=\"https://jaredforsyth.com/posts/template-based-macros-for-reason-ocaml/\">https://jaredforsyth.com/posts/template-based-macros-for-reason-ocaml/</a></p>\n<p>whitequark.org</p>\n<p>A guide to extension points in OCaml - whitespace</p>\n<p>Extension points (also known as “-ppx syntax extensions”) is the new API for syntactic extensions in OCaml. The old API, known as camlp4 …</p>\n<blockquote>\n<p>jaredforsyth.com<br/>Template-based macros in Reason/OCaml | Jared Forsyth.com<br/>Thoughts about a friendlier macro system.</p>\n</blockquote>\n<p>eu ainda não manjo muito dessa parte da linguagem ainda, então falo mais por alto mesmo (edited)</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "f4724c4e-2cb3-4781-b5b5-6ca692f3324a",
+          "img": null,
+          "username": "sibelius",
+          "time": "1 hour ago",
+          "msg": "<p>Da para fazer o mesmo usando babel</p>\n",
+          "highlights": "babel"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "12a6d3c4-ba97-4e10-9c79-9fbb60a46abd",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:02 PM",
+      "msg": "<p>Flow vs TS vs Reason?</p>\n",
+      "messages": [
+        {
+          "id": "6247347c-fa64-4af7-925f-a4a199fa8a5f",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>o sistema de tipos de reason é melhor pq vc não usa ele apenas como uma avó que bate na sua mão caso vc faça algo errado, vc consegue modelar muito bem problemas nele</p>\n<p>Primeiro que o setup é muito fácil. A ferramenta de Reason to JS é um combo de babel+eslint+flow/ts, não tem     que ficar de muito nhenhenhen com config.</p>\n<p>Segundo, um dos principais motivos antes de qualquer outra coisa foi cortar toda uma classe de bugs de regressão . Por exemplo, quando vc trabalha com rotas e alguém mudou a prop de uma roda de <code>id</code> para <code>userId</code> mas esqueceu de atualizar em todos os lugares. Essa categoria de bugs é muito chato pq quebra a expectativa dos usuários/clientes, algo que estava funcionando para de funcionar.</p>\n<p>É claro que com uma suite de testes unitário um erro assim é relativamente fácil de ser detectado e com code review o problema é que vc tem que confiar tanto no programador que fez o teste ou na programadora que está fazendo o review.</p>\n<p>Com Reason é muito fácil eliminar completamente um bug desses fazendo com que ele não possa ao menos existir em primeiro lugar. Se vc muda uma prop de um component em Reason o compilador vai te falar exatamente todos os lugares que vc precisa corrigir.</p>\n",
+          "highlights": "babel component components componente componentes flow javascript js test teste"
+        }
+      ],
+      "highlights": "flow"
+    },
+    {
+      "id": "c5903113-09ec-4994-bed4-4e701566ad00",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:02 PM",
+      "msg": "<p>como começou a astrocoders :astrocoders: ?</p>\n",
+      "messages": [
+        {
+          "id": "7ec41057-b919-497b-8679-8abe4ae3df60",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>conheci o @guilhermedecampo num forum de meteor</p>\n<p>a gente começou a astro antes mesmo de se conhecer fisicamente ahsuash</p>\n<p>tudo maluco</p>\n<p>e lá pra cá a gente evoluiu muito</p>\n<p>temos um team muito fera</p>\n",
+          "highlights": "meteor"
+        },
+        {
+          "id": "e7ced85c-a3c6-43aa-839a-dffc02aac5bc",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p>altos time!! só fera mesmo!</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "3222a7e3-473d-4246-86f2-4033b222996f",
+      "img": null,
+      "username": "patrick",
+      "time": "2:03 PM",
+      "msg": "<p>Vou começar um projeto web hoje, não sei nada de :reason: , você me indica a colocar na stack ?</p>\n",
+      "messages": [
+        {
+          "id": "9d337fd5-4894-49d4-8365-6fda35fae861",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>sim, é possível começar gradualmente com reason</p>\n<p>vc consegue ter alguns arquivos em .re e importar ele em outros modules js numa boa</p>\n<p>mas recomendo cair de cabeça</p>\n<p>e começar com tudo</p>\n<p>a comunidade é recente mas já temos muitas ferramentas prontas, como routing, bindings pra uma quantidade boa de libs</p>\n<p>redex.github.io é um projeto do glenns pra registrat tudo que precisa, o server do discord tb é muito fera, o mestres sempre tão por lá pra ajudar a galera</p>\n",
+          "highlights": "github javascript js"
+        },
+        {
+          "id": "b9e1f1d3-c531-4dd4-af8e-11a6ab0920b4",
+          "img": null,
+          "username": "patrick",
+          "time": "18 hours ago",
+          "msg": "<p>Valeu MITO!</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "web"
+    },
+    {
+      "id": "4a9ae471-9cff-44f1-9788-b3a304ab3a34",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:03 PM",
+      "msg": "<p>Como foi a curva de aprendizado do :reason: ?</p>\n",
+      "messages": [
+        {
+          "id": "5eb9c47d-c249-4e14-8d2a-07e294c2c6aa",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>não vou mentir, foi tenebrosa</p>\n<p>asjfdasj</p>\n<p>pq é uma questão de mudar de mindset</p>\n<p>tipo quando vc usava angular/blaze e viu o React pela primeira vez e não entendeu pq as coisas eram daquele jeito e vc fica tentando fazer do jeito antigo e não consegue extrair todo o potêncial</p>\n<p>mas com 1-2 meses vc já consegue sentir o valor de todo o tooling</p>\n",
+          "highlights": "react"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "af11ed34-873b-4d26-8c01-9f2d5fd3577e",
+      "img": null,
+      "username": "patrick",
+      "time": "2:04 PM",
+      "msg": "<p>O que você me recomenda pra eu aprender oCaml ?</p>\n",
+      "messages": [
+        {
+          "id": "f8d2a9e3-8228-4234-b574-7706a240f92c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>opa</p>\n<p>ocaml eu recomendo o <a href=\"https://dev.realworldocaml.org/\">https://dev.realworldocaml.org/</a></p>\n<p>livro muito bom</p>\n<p>e tb entrar no server do discord do reason</p>\n<p>O site deles é um bom lugar pra começar.  <a href=\"https://reasonml.github.io/\">https://reasonml.github.io/</a> e o do <a href=\"https://reasonml.github.io/reason-react/\">https://reasonml.github.io/reason-react/</a> tb, quando eu comecei não tinha muito material. Agora tem bastante vídeo no YouTube e demos de apps feitas. Meu conselho é não desanimar, vc tem que reaprender várias coisas, readaptar a forma de pensar, aprender e abraçar as limitações da linguagem. OCaml é uma linguagem com regras mais rígidas se comparadas com JS, mas tudo isso ajuda a construir a previsibilidade e estabilidade da linguagem e do tooling dela. Outro lugar muito importante é a comunidade no <a href=\"https://discord.gg/reasonml\">https://discord.gg/reasonml</a>, a galera ajuda muito.</p>\n<blockquote>\n<p>reasonml.github.io<br/>Reason · Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript &amp; OCaml ecosystems.<br/>Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript &amp; OCaml ecosystems.</p>\n</blockquote>\n<blockquote>\n<p>reasonml.github.io<br/>ReasonReact · All your ReactJS knowledge, codified.<br/>All your ReactJS knowledge, codified.</p>\n</blockquote>\n<blockquote>\n<p>Discord<br/>Discord - Free voice and text chat for gamers<br/>Step up your game with a modern voice &amp; text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server now! (62 kB)</p>\n</blockquote>\n",
+          "highlights": "book books livro livros github javascript js mobile react reasonml"
+        },
+        {
+          "id": "345b0977-fd44-4a72-b2e9-773ed4cbf166",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "18 hours ago",
+          "msg": "<p><a href=\"https://egghead.io/courses/get-started-with-reason\">https://egghead.io/courses/get-started-with-reason</a></p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "7c7d5c99-320e-4a49-92e3-9a33a2ca6d8a",
+          "img": null,
+          "username": "patrick",
+          "time": "17 hours ago",
+          "msg": "<p>@guilhermedecampo FREEE</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "20fde463-8cb9-48e1-a856-e7f3f82172bf",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "17 hours ago",
+          "msg": "<p>🤔  esse curso do egghead é free 🤔</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "47fe1db5-7510-4062-b1b0-32f4a364f9ee",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:04 PM",
+      "msg": "<p>Sente falta de trabalhar com :jsicon: ?</p>\n",
+      "messages": [
+        {
+          "id": "0e281fc7-80a7-4c50-bb82-69adfdb17878",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>ainda trabalho \\o/ (edited)</p>\n<p>eu gosto muito de JS apesar de todos os problemas</p>\n<p>haha</p>\n<p>gosto da flexibilidade</p>\n<p>tem vezes que vc não sabe a priori com o que tá lidando e js deixa mais fácil</p>\n",
+          "highlights": "javascript js"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "d451e154-7e1c-4b44-93af-9834fc819b5c",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:04 PM",
+      "msg": "<p>apollo vs relay?</p>\n",
+      "messages": [
+        {
+          "id": "13c11deb-f25f-4b19-9684-65a8b098962c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>eu uso apollo seguindo os padrões do relay ahsusa</p>\n<p>mas pq eu acho o apollo mais flexível e tb pq só tá rolando ele no reason</p>\n<p>eu gosto muito dos patterns do relay, aprendi a gostar na verdade</p>\n",
+          "highlights": "apollo relay"
+        }
+      ],
+      "highlights": "apollo relay"
+    },
+    {
+      "id": "94a9b1cb-ec62-4c6f-b9a2-4de28be34474",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:04 PM",
+      "msg": "<p>editor e pq?</p>\n",
+      "messages": [
+        {
+          "id": "e1d03cf6-f17b-4d8c-98a5-821613c90351",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>nvim + tmux, agilidade brutal</p>\n<p>vc não tira a mão do teclado pra nada</p>\n<p>é muito foda refatorar código com vim, 100x mais rápido que VSCOde</p>\n<p>e mais leve tb</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "7baa6975-993e-4b9b-b472-373cf0c8a503",
+          "img": null,
+          "username": "willian",
+          "time": "18 hours ago",
+          "msg": "<p>concordo 100%!</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "b24151c4-f90e-4378-b5d7-a78c0fde3f27",
+      "img": null,
+      "username": "vcapretz",
+      "time": "2:04 PM",
+      "msg": "<p>O que acha de prettier? Pretendo começar a usar mas a parte de ter algo modificando o código por mim ainda me da um pouco de medo (e isso deixa meu time resistente também), vale mesmo a pena?</p>\n",
+      "messages": [
+        {
+          "id": "3d6cfee6-71e2-40ce-b3cd-46daa90a8579",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>recomendo 120%</p>\n<p>deixo o código uniforme no time todo, fica mais fácil de fazer review se todo mundo segue a mesma linha</p>\n<p>e vc perde muitos segundos formatando manualmente</p>\n<p>embrace the community</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "cd76e9e2-b85f-42dd-a9ad-42c6c9e5da66",
+          "img": null,
+          "username": "raphox",
+          "time": "18 hours ago",
+          "msg": "<p>@vcapretz tem link de referência?</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "655f61f5-a5a7-43ff-8147-7e811de15127",
+          "img": null,
+          "username": "vcapretz",
+          "time": "18 hours ago",
+          "msg": "<p>@raphox <a href=\"https://github.com/prettier/prettier\">https://github.com/prettier/prettier</a></p>\n<blockquote>\n<p>GitHub<br/>prettier/prettier<br/>prettier - Prettier is an opinionated code formatter.</p>\n</blockquote>\n",
+          "highlights": "github"
+        },
+        {
+          "id": "6e8906ec-77d0-4cb3-a070-cccf946b5648",
+          "img": null,
+          "username": "tiagocedrim",
+          "time": "18 hours ago",
+          "msg": "<p>A propria documentação é muito boa</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "bbe9c690-3dc0-4f4e-9dcd-7dc711653da6",
+          "img": null,
+          "username": "raphox",
+          "time": "18 hours ago",
+          "msg": "<p>é tipo um jslint só que na hora de salvar ele já altera do código seguindo as regras?</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "4b2bb3bb-6dfc-44a9-9a05-624f1ac2c3a8",
+          "img": null,
+          "username": "vcapretz",
+          "time": "18 hours ago",
+          "msg": "<p>Isso! Basicamente isso 😁</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "deb9b7bc-25f2-4f81-a51a-4327e813a954",
+          "img": null,
+          "username": "hnordt",
+          "time": "17 hours ago",
+          "msg": "<p>@raphox soh uma ressalva, ele eh um jslint apenas pra formatacao de codigo, nao aplica nenhuma regra a nivel tecnico</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "9d3fb5ef-372d-4933-bda5-b9dc9e3669b7",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:06 PM",
+      "msg": "<p>Se eu tenho um projeto grande hoje com javascript(React), valeria a pena um “refactor de linguagem” para :reason:?</p>\n",
+      "messages": [
+        {
+          "id": "4fe30121-ce7c-4d71-bbdb-e5900c7060fb",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>valeria \\o/ mas recomendo ir por partes tb</p>\n<p>refatorar código com Reason é ❤️</p>\n<p>pq vc pode mudar tudo sem medo de errar</p>\n<p>o compilador não te deixa fazer 90% das merdas que vc geralmente faz por esquecer detalhes</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "javascript js react"
+    },
+    {
+      "id": "d582e154-020b-440f-b94c-77b579f9baa3",
+      "img": null,
+      "username": "patrick",
+      "time": "2:07 PM",
+      "msg": "<p>Quando o cliente deixa na sua mão a stack que vai ser desenvolvida,  você diz que vai de :reason: . O cliente pede pra você explicar a stack, como se dá isso? Aceitam de boa?</p>\n",
+      "messages": [
+        {
+          "id": "39ad286c-a9a0-4edb-af16-38d38101294c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "16 hours ago",
+          "msg": "<p>depende do cliente, alguns só perguntam se é seguro ahsusa, a gente teve um cliente recente que entrou em contato com a gente exatamente pq a gente usa :reason: :frenetic-parrot:</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "dfdfdf57-c089-45ba-8853-70d5d7405986",
+          "img": null,
+          "username": "patrick",
+          "time": "16 hours ago",
+          "msg": "<p>hahahaha!</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "9a015519-61da-4c50-a8f4-7406ea7b7895",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:08 PM",
+      "msg": "<p>open source vale a pena?</p>\n",
+      "messages": [
+        {
+          "id": "024412f1-a6f6-40a7-b6dc-2a4e518cfc04",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>vale demais</p>\n<p>como open source vc tem a disposição a uma força intelectual coletiva que sua empresa nunca seria capaz de contratar</p>\n",
+          "highlights": "open source"
+        }
+      ],
+      "highlights": "open source"
+    },
+    {
+      "id": "6d4ce9c4-12f5-4811-9017-589c3a3eb03c",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:08 PM",
+      "msg": "<p>fullstack existe?</p>\n",
+      "messages": [
+        {
+          "id": "069866d6-feae-42a4-a47b-e1c1f4c2c2bd",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>🦄</p>\n<p>existe</p>\n<p>acho importante em todo time ter um fullstack</p>\n<p>é a cola que une as tribos</p>\n<p>ahusaas</p>\n<p>mesmo tendo gente mais especializada e o fullstack não podendo saber afundo de tudo essa pessoa ajuda como um tradutor do time pra ajudar em perspectivas</p>\n",
+          "highlights": "fullstack"
+        }
+      ],
+      "highlights": "fullstack"
+    },
+    {
+      "id": "ffa75b67-64f8-41ba-b9ea-7a9498f7af8f",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:08 PM",
+      "msg": "<p>O reason-react resolve bastante coisa pro front em :reason: , mas e no back, como fizeram?</p>\n",
+      "messages": [
+        {
+          "id": "c07e23ab-d7c4-4404-988d-2ae1304aa3ba",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>no back ainda não tem muito projeto pronto</p>\n<p>mas tem algumas coisas no forno</p>\n<p>a gente usa muito pra worker</p>\n<p>jobs de background</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "937bfbf1-e680-45e9-80bd-88a0f6e3441d",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "2:08 PM",
+      "msg": "<p>Não conheço a comunidade reason, como está a taxa de adoção de reason na interwebs?</p>\n",
+      "messages": [
+        {
+          "id": "c49cf69a-8085-401c-80a0-0f1a4a936f7a",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>muito boa, a galera da callstack e os big players já tão entrando na rodada</p>\n<p>o cara do <a href=\"http://2ality.com/\">http://2ality.com/</a> já anda muito na comunidade</p>\n<p>sem falar que tem o Facebook por trás</p>\n<p>eu sinceramente acho que Reason é o futuro da comunidade JS</p>\n",
+          "highlights": "javascript js"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "8c0a0dd9-cbcb-44d5-988d-ed230da9d0ce",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:09 PM",
+      "msg": "<p>bitcoin é o futuro? devo comprar? e outras altcoins?</p>\n",
+      "messages": [
+        {
+          "id": "80c76bed-57d1-419a-97bb-0caf0b8b3602",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>sim, viva a descentralização \\o/</p>\n<p>compra nano</p>\n<p>ethereum</p>\n<p>esses tem potencial</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "68b632be-6296-4f1f-8d85-7b80a31c883c",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:09 PM",
+      "msg": "<p>ideas para bitcoin/blockchain?</p>\n",
+      "messages": [
+        {
+          "id": "616f5260-6d18-485a-9d44-3ce9fe04cd50",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>uma api que facilite receber dinheiro fiat em cripto</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "a267281f-de37-4ef0-bb81-9986071b569e",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:10 PM",
+      "msg": "<p>Quem são suas influências no mundo Open Source?</p>\n",
+      "messages": [
+        {
+          "id": "aba2813a-7ec3-4aea-85cc-e46f62e3ed0c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>dan, arunoda, toda a galera do MDG, a galera da :entria: com certeza, cheng lou, jared e jamesbuilds</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "open source"
+    },
+    {
+      "id": "acf4cc25-8e20-4815-8717-4ce3eaa216e7",
+      "img": null,
+      "username": "patrick",
+      "time": "2:11 PM",
+      "msg": "<p>Pra termos uma noção de curva de aprendizado, o que você acha mais difícil pra uma pessoa <code>que não sabe nenhum dos assuntos</code> aprender? VIM ou :reason:  ?</p>\n",
+      "messages": [
+        {
+          "id": "577c2997-9929-4cbb-b929-28aa2c3dcd7f",
+          "img": null,
+          "username": "patrick",
+          "time": "2:11 PM",
+          "msg": "<p>gabriel.ml</p>\n<blockquote>\n<p>nvim + tmux, agilidade brutal<br/>From a thread in #generalYesterday at 2:09 PM</p>\n</blockquote>\n",
+          "highlights": ""
+        },
+        {
+          "id": "99441780-7321-48ec-b0e0-3b8d2b2ae26c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>vim, 5 semana pra aprender a fechar</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "4ef0f07b-8ce4-4ed4-91df-3fabe2ec4112",
+          "img": null,
+          "username": "patrick",
+          "time": "18 hours ago",
+          "msg": "<p>kkkkkkkkkkkkkkkkkkkk 👍 (edited)</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "4432296d-5450-495e-b4c1-51ec97b4f7ad",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:12 PM",
+      "msg": "<p>O que você gostaria que um parente ou pessoa conhecida tivesse te avisado/ensinado sobre a vida e sobre o trabalho?</p>\n",
+      "messages": [
+        {
+          "id": "ee78bd3f-26d2-4ac1-b374-2d200a853177",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>saber que vc se cobra bem mais do que os outros realmente esperam</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "73ab8860-265e-4ee6-9a50-0e0b4a7ef8da",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:13 PM",
+      "msg": "<p>Como costuma ser seu dia na :astrocoders: ?</p>\n",
+      "messages": [
+        {
+          "id": "9856c4b5-ac0e-494f-af35-dd1411197a3e",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>atualmente, entro as nove e saiu as 18h do office</p>\n<p>toda segunda eu me reuno com o @guilhermedecampo e discutimos as tarefas da semana e distrubuimos no pivotal pra galera</p>\n<p>o resto da semana basicamente é mão na massa e code review</p>\n<p>e memes</p>\n<p>:dollynho:</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "2d5476ea-00fe-4c05-b64d-52e027718f35",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:13 PM",
+      "msg": "<p>Quais as vantagens e desvantagens de ter uma empresa no Brasil?</p>\n",
+      "messages": [
+        {
+          "id": "49e2bdb6-4b3f-4144-9461-bff130138245",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>impostos</p>\n<p>vantagem: muita gente esforçada</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "3ea9f0c1-3eab-47d4-b238-33af6bc44ed2",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:14 PM",
+      "msg": "<p>Você já sofreu algum preconceito? Como lidou com isso?</p>\n",
+      "messages": [
+        {
+          "id": "debabd68-6cfd-4ee5-9596-a651171fd7c6",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>creio que não 🤔</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "52c07a2f-5888-4807-81bd-6e196fb886ee",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:15 PM",
+      "msg": "<p>No dia a dia o que te mantém motivado?</p>\n",
+      "messages": [
+        {
+          "id": "ba0cf28c-eaf3-4415-ace3-eaf23adc74b5",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>saber que existe muito conhecimento e coisa foda que eu ainda não descobri</p>\n<p>sou viciado em absorver coisas</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "7639cdcc-18eb-40f1-8f0f-39cb29d46966",
+      "img": null,
+      "username": "patrick",
+      "time": "2:15 PM",
+      "msg": "<p>Você acha que a falta do inglês torna o aprendizado de libs (:reason: , :react: , :redux: , :graphql: , :flow:, ...) mais difícil? Se sim, qual a sua sugestão pra aprender inglês?</p>\n",
+      "messages": [
+        {
+          "id": "765b7646-09dd-44bf-933a-f82ed145cfa3",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>eu acho que sim</p>\n<p>pq dificulda o reasoning</p>\n<p>vc vê muito termo em inglês (edited)</p>\n<p>a comunidade global é inglês, se vc não manja muito te limita as suas fontes</p>\n<p>e eu realmente prefiro raciocionar em inglês, acho uma lingua mais flexível e fácil de montar conjecturas</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "6a931971-bebe-47d3-86bf-4277e77cd315",
+          "img": null,
+          "username": "patrick",
+          "time": "18 hours ago",
+          "msg": "<p>E qua sua sugestão pra aprender inglês?</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "2e4f70d4-9985-4303-accb-f2fe8378302f",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "13 hours ago",
+          "msg": "<p>juntar o útil ao agradável, assistir séries com legenda em inglês pra ir absorvendo</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "flow graphql react redux"
+    },
+    {
+      "id": "4f8f2638-6034-486d-8efd-27da0a12c3e4",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "2:18 PM",
+      "msg": "<p>Javascript all the things? No meio de tanta coisa pra se estudar, vc acha que o meio javascript é a coisa a se focar?</p>\n",
+      "messages": [
+        {
+          "id": "d72c6cb5-12ce-48f8-81c5-6995fcd6e255",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>acho \\o/</p>\n<p>vc não precisa aprender 14 linguagens pra ser fullstack hoje em dia</p>\n<p>com js vc domina tudo</p>\n<p>e depois recomendo ir pra ocaml e reason</p>\n<p>pra complementar</p>\n",
+          "highlights": "fullstack javascript js"
+        }
+      ],
+      "highlights": "javascript js"
+    },
+    {
+      "id": "344893e8-5d24-4143-bde9-a90d3ceb6513",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:18 PM",
+      "msg": "<p>Qual sua opinião sobre políticas públicas e o você faria se fosse presidente do Brasil no âmbito tecnológico?</p>\n",
+      "messages": [
+        {
+          "id": "f376dcd5-2355-4105-9946-6b7855a3a8f4",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>daria benefício fiscal pra provedores de internet</p>\n<p>tudo começa com uma boa conexão</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "870b45aa-aea7-45f1-b8a8-0d43614c93d4",
+      "img": null,
+      "username": "vcapretz",
+      "time": "2:19 PM",
+      "msg": "<p>O que recomenda de livros técnicos e não técnicos?</p>\n",
+      "messages": [
+        {
+          "id": "20ecfa8a-bc1a-47d2-98de-9577e6530b4c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>não sou muito de ler livros 😕</p>\n<p>gosto mais de artigos, ler código e trocar ideia</p>\n<p>acho mais fácil de absorver</p>\n<p>recomendo acompanhar os gists da galera</p>\n<p>sempre tem uns tesouros</p>\n",
+          "highlights": "book books livro livros"
+        }
+      ],
+      "highlights": "book books livro livros"
+    },
+    {
+      "id": "21136f76-1b29-4979-9c34-c76d8d9aab3c",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:20 PM",
+      "msg": "<p>Explica melhor pra gente oque é o reason-react? :react: + :reason:</p>\n",
+      "messages": [
+        {
+          "id": "5f721c36-bf95-46d1-8ad6-0d152b51a7c1",
+          "img": null,
+          "username": "Jabur",
+          "time": "2:20 PM",
+          "msg": "<p><a href=\"https://github.com/reasonml/reason-react\">https://github.com/reasonml/reason-react</a></p>\n<blockquote>\n<p>GitHub<br/>reasonml/reason-react<br/>reason-react - Reason bindings for ReactJS</p>\n</blockquote>\n",
+          "highlights": "github react reasonml"
+        },
+        {
+          "id": "27fee7e0-0a5b-46c4-a923-8261ceab0050",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>é a maneira mais sana atualmente de criar interfaces pra web e native \\o/</p>\n<p>ReasonReact é um &quot;binding&quot; de React JS pra reason, vc consegue usar tudo que tá na comunidade em JS nele e ter um código React mais robusto e fácil de manter</p>\n",
+          "highlights": "javascript js native react web"
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "fb8da5f1-3ead-4b7e-878b-f2c211fd7d76",
+      "img": null,
+      "username": "vcapretz",
+      "time": "2:20 PM",
+      "msg": "<p>O que você considera um dev front sênior? Como fazer pra chegar lá?</p>\n",
+      "messages": [
+        {
+          "id": "25cadfe6-a056-4a30-b21c-352d3eac4796",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>acho a classificação por senioridade meio limitante pra separar os talentos</p>\n<p>ler muito, procastinar de forma &quot;útil&quot;, saber quando descansar e interajir com a comunidade</p>\n<p>eu me considero fulstack sênior * 0.7%, com margem de 0.1% lol (edited)</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "3a30436a-be6a-4e5a-a475-5b0ff4c202c5",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:21 PM",
+      "msg": "<p>rest vs graphql?</p>\n",
+      "messages": [
+        {
+          "id": "077ad72a-54b7-4b6e-9680-dbb4da765e50",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>graphql com certeza</p>\n<p>acho que a abstração de graphql permite que vc expresse seus dados de forma mais limpa e clara</p>\n",
+          "highlights": "graphql"
+        }
+      ],
+      "highlights": "graphql"
+    },
+    {
+      "id": "4b1235fa-4e94-4d72-a16b-f632e7eca8d9",
+      "img": null,
+      "username": "patrick",
+      "time": "2:21 PM",
+      "msg": "<p>Vale a pena alguém largar um emprego estável e entrar fulltime no mundo dos freelas+opensource ?</p>\n",
+      "messages": [
+        {
+          "id": "60adfdbd-1f2e-4913-88e8-b0008f39a9da",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p>😮</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "badeb400-7b4e-4dce-a53f-2e336992f269",
+          "img": null,
+          "username": "adelgado",
+          "time": "18 hours ago",
+          "msg": "<p>Pesadíssima</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "67337750-40f6-463e-967c-674724f55f48",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>acho, se vc for jovem sem muitas responsas (família, filhos) e quiser ter experiência não há caminho melhor</p>\n<p>interagir com pessoas e open source te tornam um programador e uma pessoa melhor</p>\n",
+          "highlights": "open source"
+        },
+        {
+          "id": "97a0be83-a054-4970-88c9-48ff954c94e5",
+          "img": null,
+          "username": "willian",
+          "time": "18 hours ago",
+          "msg": "<p>@patrick acho que freelas e opensource são coisas distintas</p>\n<p>Eu larguei emprego estável CLT em 2013 para trabalhar de casa, montei (e continuo montando) um escritório em um cômodo do apê e desde então trabalho full-time com empresas do exterior, ganhando quase 5x mais do que eu ganhava antes</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "6f655538-36c9-467c-9839-5a245e11c1d1",
+          "img": null,
+          "username": "patrick",
+          "time": "18 hours ago",
+          "msg": "<p>Maravilha @willian , isso é meta de vida pra mim, mas atualmente estou inseguro quanto ao inglês! 😕</p>\n<p>Mas ja estou trabalhando nisso! 🔥</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "f59a4f45-4d24-482f-8836-6c1bc834b585",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p>@patrick vamos bater um papo em ingles hoje? tem que perder o medo falando.</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "e7e6118f-9df1-4124-ad68-6ec6be2cc8ce",
+          "img": null,
+          "username": "patrick",
+          "time": "18 hours ago",
+          "msg": "<p>@Jabur ❤️</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "cee34b30-5f5b-44f4-afbe-96e8730460e9",
+          "img": null,
+          "username": "willian",
+          "time": "18 hours ago",
+          "msg": "<p>@patrick quando eu comecei eu tinha um nível de inglês do intermediário ao avançado, ainda errava muito mais do que hoje. Mas dei a cara a tapa, algumas portas se fecharam para mim na época. Mas aproveitei as que se abriram e fui melhorando cada vez mais conforme a insegurança ia diminuindo.</p>\n<p>Atualmente trabalho pela Toptal (<a href=\"https://www.toptal.com/#unite-proven-devs-now\">https://www.toptal.com/#unite-proven-devs-now</a>) e fui recrutador da empresa, fazia entrevistas com devs de diversos países que queria entrar na plataforma. Tudo isso em inglês.</p>\n<blockquote>\n<p>toptal.com<br/>Toptal - Hire Freelance Talent from the Top 3%<br/>Toptal enables start-ups, businesses, and organizations to hire freelancers from a growing network of top talent in the world. Find quality talent to work full-time, part-time, or hourly who will seamlessly integrate into your team. (37 kB)</p>\n</blockquote>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "1eb4eed7-1844-4d96-9531-0bf0f0590449",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:21 PM",
+      "msg": "<p>qual app/idea/projeto você gostaria que existisse?</p>\n",
+      "messages": [
+        {
+          "id": "dce9efac-748f-4cc4-a1e8-f64c05b88609",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>uma forma melhor de ajudar pessoas ociosas a ganharem dinheiro e movimentar uma economia mais coletiva</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "8f3fb6a7-825c-47bd-bb31-301bc3349951",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:23 PM",
+      "msg": "<p>Porque e quando começou a programar?</p>\n",
+      "messages": [
+        {
+          "id": "21ab0d98-b102-464a-93d1-b9af9cfb17ad",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>comecei com 13 anos, num PC sem internet ashuas</p>\n<p>mais pq a única coisa que tinha na máquina era um livro da o&#39;rielly 😂</p>\n<p>e tempo eu tinha bastante</p>\n<p>e tb adoro sentir que eu sou capaz de construir algo e dar vida aquilo</p>\n<p>eu considero programas uma forma de seres vivos mais simples, pura arte</p>\n",
+          "highlights": "book books livro livros"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "fc85aa51-768a-4204-ba5d-a23c0fa6f137",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "2:23 PM",
+      "msg": "<p>O que vc faz fora do trabalho pra poder recarregar tuas baterias? (edited)</p>\n",
+      "messages": [
+        {
+          "id": "b3facbcb-97f0-4273-8d23-be90c7f312e0",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>memes</p>\n<p>passar tempo com minha mulher</p>\n<p>netflix e canais de ciência aleatórios do youtube</p>\n<p>open source tb, pq vc pode criar algo que sua existência não necessariamente depende daquilo, vc pode liberar seu potencial criativo e manter sua mente alegre</p>\n",
+          "highlights": "open source"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "aa352a8d-d2fe-4312-8d94-9161307ab7a5",
+      "img": null,
+      "username": "Nic",
+      "time": "2:23 PM",
+      "msg": "<p>Como está a Comunidade do Brasil de :reason:, :react:, :graphql: , :relay:, :flow: .. vs o cenário lá fora?</p>\n",
+      "messages": [
+        {
+          "id": "0fcf7408-ef61-45ba-9858-71f868804b98",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>acho que por causa das dificilidades, conexão ruim, computador bom caro, os br ficaram melhores</p>\n<p>os ventos fortes do norte criaram os vikings</p>\n<p>a gente é bem melhor do que a gente pensa que é</p>\n<p>dunning-krueger</p>\n<p>acho que a comunidade br tb é muito bem vista lá fora</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "flow graphql react relay"
+    },
+    {
+      "id": "a5ba57bd-05db-465a-aa14-51eef352f50a",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:24 PM",
+      "msg": "<p>o que você aprendeu essa semana?</p>\n",
+      "messages": [
+        {
+          "id": "9607454f-9811-4b50-836e-1b8bfd8769ea",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>aprendendo a usar figma pra modelar exaustivamente uma ideia antes de codar</p>\n<p>e tb a usar ocaml nativo com postgres</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "89ca607b-7e5f-4396-8561-493afea48e62",
+          "img": null,
+          "username": "hnordt",
+          "time": "18 hours ago",
+          "msg": "<p>@gabriel.ml a parte mais importante da talk na minha opiniao: modelar exaustivamente uma ideia antes de codar</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "b73a5fb9-ab69-4d31-bbae-8ce4638d9e7b",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>☝️ the devil is in the edge cases</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "cb1d2124-325f-4c6b-ae8e-a0191adc2214",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:24 PM",
+      "msg": "<p>qual sideproject você está fazendo?</p>\n",
+      "messages": [
+        {
+          "id": "b89a4627-4a2c-4708-bd29-90ee6580046f",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>uma api que una render props e hocs</p>\n<p>e suspense</p>\n<p>quando eu achar o gif demo eu mando haus</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "21a4d061-258c-470d-a42a-db5d1c9678de",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:26 PM",
+      "msg": "<p>Sente falta da flexibilidade do js+flow? Ou o :reason: também te traz isso?</p>\n",
+      "messages": [
+        {
+          "id": "0e115836-c8af-4ff8-b902-65afa1a1ccf5",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>sentia mais falta antes pq eu tentava fazer do js way no reason</p>\n<p>depois que eu abracei mais os limites do :reason: minha mente abriu um terceiro olho</p>\n",
+          "highlights": "javascript js"
+        }
+      ],
+      "highlights": "flow javascript js"
+    },
+    {
+      "id": "d518cd7b-127c-446b-9bae-123c36e9434b",
+      "img": null,
+      "username": "dexfs",
+      "time": "2:29 PM",
+      "msg": "<p>Para quem mudou de uma outra linguagem para o JS, o que te motivou ? Como foi o processo e as dificuldades?</p>\n",
+      "messages": [
+        {
+          "id": "c851f7e6-85bf-495d-a1ee-2bcd63fb95fe",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>a maior dificuldade é muita de mindset, a maior vantagem é abrir a mente pra mais possibilidade de expressar ideias no código e eliminar bugs de regressão bestas</p>\n<p>tipo quando alguém muda os arg de uma função no utils e não atualiza no projeto inteiro</p>\n<p>com :reason: isso é impossível</p>\n<p>vc refatora e ele te mostra todos os locais que vc tem que atualizar</p>\n<p>sem esforço extra</p>\n<p>e antes do cliente ver quebrando em produção</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "ac47bb65-9fdd-4c61-aa2a-2193cac46b92",
+          "img": null,
+          "username": "nicholasess",
+          "time": "18 hours ago",
+          "msg": "<p>que foda ❤️</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "javascript js"
+    },
+    {
+      "id": "b6f572ae-ed50-4c0a-be0b-753d133e088a",
+      "img": null,
+      "username": "patrick",
+      "time": "2:31 PM",
+      "msg": "<p>Tem vaga na :astrocoders: ?</p>\n",
+      "messages": [
+        {
+          "id": "260e24dc-565f-49f7-b9a5-ddcd80bc8bdb",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>estamos de braços apertos</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "05000dc7-e168-40df-9ad7-998f4cd4ce82",
+          "img": null,
+          "username": "nicholasess",
+          "time": "18 hours ago",
+          "msg": "<p>abertos*</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "d127a913-d14f-43c6-b063-f42068e91ed4",
+          "img": null,
+          "username": "patrick",
+          "time": "18 hours ago",
+          "msg": "<p>Achei que era algum trocadilho, etc... estava tentando decifrar</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "e63c26ad-2107-4246-b715-5044b4f7df80",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:33 PM",
+      "msg": "<p>Você já usou ou usa alguma substância para aumentar a produtividade?</p>\n",
+      "messages": [
+        {
+          "id": "a8496d68-196e-402a-bde6-b92d3bfd5c8d",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>café com uisque conta? asuhasuas</p>\n<p>já pensei em nootropico, mas me fez pensar que é melhor ficar mais saudável e comer melhor</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "23220dfc-c0dd-4119-8669-6e980465813b",
+      "img": null,
+      "username": "patrick",
+      "time": "2:34 PM",
+      "msg": "<p>Quais apps utiliza diariamente que são indispensáveis? (edited)</p>\n",
+      "messages": [
+        {
+          "id": "3214eaf8-8396-4053-9243-8ac112155c8b",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>google now sempre me mantém atualizado com as coisas que eu me importo</p>\n<p>twitter tb é o melhor feed pra saber o que a galera foda anda fazendo</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "cbf88182-cb86-49b8-b062-1566ff1d8e1d",
+      "img": null,
+      "username": "jcm",
+      "time": "2:34 PM",
+      "msg": "<p>onde vc gostaria de está daqui 5 anos? Tanto fisicamente quanto profissionalmente</p>\n",
+      "messages": [
+        {
+          "id": "20c5dccb-2266-49d9-9d79-b5dd1e6c740a",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>sussegado e investindo em agrotech e &quot;housingtech&quot; \\o/</p>\n<p>quero muitor trabalhar com uma forma de dar moradia de qualidade e acessível pra todo mundo</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "84de14ea-d931-40fd-bb0f-c616c8b31b5c",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:35 PM",
+      "msg": "<p>redux vs mobx vs context api?</p>\n",
+      "messages": [
+        {
+          "id": "3eb28f74-26be-49c4-a41e-420f6e8c312b",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>estado local + graphql \\o/</p>\n",
+          "highlights": "graphql"
+        }
+      ],
+      "highlights": "redux"
+    },
+    {
+      "id": "738afb59-5cdd-42ef-a9c4-5bad632d55f5",
+      "img": null,
+      "username": "Nic",
+      "time": "2:37 PM",
+      "msg": "<p>Styled-components vale a pena?</p>\n",
+      "messages": [
+        {
+          "id": "3a97971f-a21f-4dcc-8d60-d1acaec2ad46",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>vale a galinha toda</p>\n<p>faz mais de um ano desde que eu escrevi meu último arquivo css</p>\n<p>a abstração de estilos de Css in JS é muito melhor, pq libera todo o poder de uma full turing power language em CSS</p>\n",
+          "highlights": "css javascript js styled styleds estilo estilos"
+        },
+        {
+          "id": "f3ddbd54-60e7-4274-ae43-ff782e7b2a3b",
+          "img": null,
+          "username": "willian",
+          "time": "18 hours ago",
+          "msg": "<p>Concordo 100% aqui tb, só prefiro glamorous do que styled-components. Mas isso é uma preferência pessoal 🙂</p>\n",
+          "highlights": "component components componente componentes styled styleds estilo estilos"
+        },
+        {
+          "id": "7d408268-0038-4e16-a779-23c77c9d8f83",
+          "img": null,
+          "username": "brunolemos",
+          "time": "17 hours ago",
+          "msg": "<p>Glamorous está para ser deprecated em favor do emotion ou styled-components <a href=\"https://twitter.com/kentcdodds/status/994230853189320705?s=21\">https://twitter.com/kentcdodds/status/994230853189320705?s=21</a></p>\n<blockquote>\n<p>Kent C. Dodds @kentcdodds<br/>I&#39;m sorta thinking of deprecating glamorous 💄 in favor of emotion 👩‍🎤</p>\n</blockquote>\n<p>(Not styled-components though. emotion can do objects and strings of CSS, also it&#39;s smaller and faster).</p>\n<p>TwitterMay 9th at 12:01 PM</p>\n",
+          "highlights": "component components componente componentes css styled styleds estilo estilos"
+        },
+        {
+          "id": "67443d6f-221c-41eb-ab13-e0124ab7da41",
+          "img": null,
+          "username": "sibelius",
+          "time": "17 hours ago",
+          "msg": "<p>a motivação do glamorous foi só pq o sc não suporta objects</p>\n<p>o Max fez isso em 16 linhas e boa</p>\n<p>agora suporta</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "4212d91d-704a-4440-9da2-c9f0a2aa7770",
+          "img": null,
+          "username": "brunolemos",
+          "time": "17 hours ago",
+          "msg": "<p>Agora falta a parte do &quot;smaller and faster&quot;</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "64a9b4d7-0d51-4c64-81f7-955ae98dfc8c",
+          "img": null,
+          "username": "sibelius",
+          "time": "17 hours ago",
+          "msg": "<p>small and fast enough</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "755939a2-c0f3-4630-be8c-4b1abc405936",
+          "img": null,
+          "username": "willian",
+          "time": "13 hours ago",
+          "msg": "<p>@brunolemos valeu por ter compartilhado, não tinha visto este tweet de 2 dias atrás</p>\n<p>Eu realmente prefiro o glamorous por ser tudo em objects e não strings.</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "4dd33231-b9bb-4ee7-aa09-6cd003b525dc",
+          "img": null,
+          "username": "brunolemos",
+          "time": "13 hours ago",
+          "msg": "<p>@willian como o sibelius comentou, agora o styled-components tbm suporta objetos, e o emotion já suportava, então todos suportam</p>\n<p><a href=\"https://twitter.com/mxstbr/status/994499829379338240\">https://twitter.com/mxstbr/status/994499829379338240</a></p>\n<blockquote>\n<p>Max Stoiber @mxstbr<br/>@kentcdodds @jxnblk 8 minutes later: <a href=\"https://github.com/styled-components/styled-components/pull/1732\">https://github.com/styled-components/styled-components/pull/1732</a><br/>+16, -3 is all it took 😉<br/>TwitterMay 10th at 5:50 AM</p>\n</blockquote>\n<p><a href=\"https://github.com/styled-components/styled-components/pull/1732\">https://github.com/styled-components/styled-components/pull/1732</a></p>\n<blockquote>\n<p>GitHub<br/>First-class object support by mxstbr · Pull Request #1732 · styled-components/styled-components<br/>With this patch you can now do const Component = styled.div({ color: &#39;blue&#39; }) This is in response to <a href=\"https://mobile.twitter.com/kentcdodds/status/994254700651339776\">https://mobile.twitter.com/kentcdodds/status/994254700651339776</a>, /cc @kentcdodds</p>\n</blockquote>\n",
+          "highlights": "component components componente componentes github mobile styled styleds estilo estilos"
+        },
+        {
+          "id": "0dcf9577-5074-4656-9e20-dd3a3e5083f7",
+          "img": null,
+          "username": "willian",
+          "time": "13 hours ago",
+          "msg": "<p>é, eu vi esse PR enquanto lia a outra thread. Mas agora me resta procurar benchmarks para ver qual lib compensa mais (performance e tamanho)</p>\n<p>pelo o que vi o emotion continua sendo mais leve e, dizem, mais rápido do que o styled-components</p>\n",
+          "highlights": "component components componente componentes styled styleds estilo estilos"
+        },
+        {
+          "id": "5319d527-4003-4710-97c5-b96b72e99360",
+          "img": null,
+          "username": "hnordt",
+          "time": "11 hours ago",
+          "msg": "<p>prefiro JSXStyle, que tem a mesma API do React Native <code>&lt;View padding={x} color={y} … /&gt;</code>, funciona muito bem e adere totalmente ao “jeito React” de desenvolver (edited)</p>\n<p>na minha exp vc tem q fazer jangling pra compor componentes com styled-components</p>\n<p>uma vez q vc aprende a compor bem os componentes, jsxstyle comeca fazer muito sentido</p>\n",
+          "highlights": "component components componente componentes native react styled styleds estilo estilos"
+        },
+        {
+          "id": "4a2aa74e-fd6d-48c2-bc7d-89efa6ca190e",
+          "img": null,
+          "username": "sibelius",
+          "time": "10 hours ago",
+          "msg": "<p>O styled componentes resolve o naming</p>\n<p>Poucas pessoas entendem isso</p>\n<p>Resolve componente simples + style</p>\n",
+          "highlights": "component components componente componentes styled styleds estilo estilos"
+        },
+        {
+          "id": "b18a88dc-8f80-4b6b-8cee-d6df4e5f2897",
+          "img": null,
+          "username": "hnordt",
+          "time": "10 hours ago",
+          "msg": "<p>eu gosto do jsxtyle justamente por nao precisar nomear components intermediarios</p>\n<p>e jsxstyle resolve tudo que o styled resolve, mas de forma mais elegante 😛</p>\n<p>mas eh uma questao de gosto, os dois sao otimas opcoes</p>\n",
+          "highlights": "component components componente componentes styled styleds estilo estilos"
+        }
+      ],
+      "highlights": "component components componente componentes styled styleds estilo estilos"
+    },
+    {
+      "id": "8a2bedef-764b-40ea-b433-036d1ce93744",
+      "img": null,
+      "username": "Bruno Gama",
+      "time": "2:39 PM",
+      "msg": "<p>que conselhos você dá pra quem quer começar a contribuir com open source?</p>\n",
+      "messages": [
+        {
+          "id": "1879e077-2e0a-4946-904c-bb7783edd725",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>olhar o padrão de commits do repositório antes lol</p>\n<p>e perguntar na issue antes de mandar a PR alsjdfa</p>\n<p>poupa trabalhar e depois ter a PR recusada</p>\n<p>aprender a trabalhar com PRs ☝️</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "c5c46911-2645-41ff-a6b7-11dcc0f3efbb",
+          "img": null,
+          "username": "nicholasess",
+          "time": "18 hours ago",
+          "msg": "<p>contribuir com open source não resume a alterar código do projeto.</p>\n<p>pode ser ajudando nas issues, checkando os PRs, alterando arquivos README e etc</p>\n",
+          "highlights": "open source"
+        }
+      ],
+      "highlights": "open source"
+    },
+    {
+      "id": "ed31ca37-dcb3-4aa3-8396-5119053772a1",
+      "img": null,
+      "username": "patrick",
+      "time": "2:40 PM",
+      "msg": "<p>Além do figma, pra organizar ideias/prototipos você utiliza algum app de mindset? Ou anotações etc?</p>\n",
+      "messages": [
+        {
+          "id": "8c49c0ef-e3b5-4124-89be-2eb2922ff6ab",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>papel ftw</p>\n<p>depois de rabiscar no papel passar pro figma (edited)</p>\n<p>evita fazer bikeshedding</p>\n<p>ficar discutindo como discustir o projeto sem nunca discutir o projeto é sim é pior</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "e31c59ab-06d6-4fa7-adcc-734e1183af1f",
+          "img": null,
+          "username": "hnordt",
+          "time": "18 hours ago",
+          "msg": "<p>gosto de usar o mindnode tb</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "8bac0311-41b7-4753-81fe-a191f98295ef",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>mapas mentais tb são legais, mas eu acabo não curtindo muito, mas acho bem válido</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "43b5680f-d2f3-4e2d-8273-2e5d091f3a09",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:40 PM",
+      "msg": "<p>Quais projetos open source em :reason: você recomenda pra quem ta começando?</p>\n",
+      "messages": [
+        {
+          "id": "19b47d83-f33c-4e55-b195-9a1b6f196a3b",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>olhar o código do bs-react-native</p>\n<p>e do github/Astrocoders/reform (edited)</p>\n<p>esses tem basicamente a essência do que vc vai usar em Reason</p>\n",
+          "highlights": "github native react"
+        }
+      ],
+      "highlights": "open source"
+    },
+    {
+      "id": "0864074a-8dcc-4378-bc0d-fd86017372dc",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:40 PM",
+      "msg": "<p>Quais seus maiores desafios em liderar um time?</p>\n",
+      "messages": [
+        {
+          "id": "ac1a6bad-3a9e-4477-ac5d-6da6af98352c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>estimativas e saber o estado mental do time e falar quando eles devem descansar</p>\n<p>as vezes tem alguém arrastando o time simplesmente pq tá se cobrando demais e não descansou direito</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "ba6e6e4e-ece3-41c0-875e-ea9c05923eb8",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:41 PM",
+      "msg": "<p>Os desenvolvedores que entram na :astrocoders: curtem trabalhar com :reason:  já de início? Ou rola alguma oposição?</p>\n",
+      "messages": [
+        {
+          "id": "59b585b6-0577-4f1b-87e0-a8b97e453d80",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>curtem depois do primeiro tour</p>\n<p>eu mostro como a gente consegue refator dezenas de arquivo e o projeto rodar de primeiro depois 💃</p>\n<p>já convence bem isso ahuasa</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "e78e8953-15d2-4cab-910c-61e371a95dba",
+      "img": null,
+      "username": "Bruno Gama",
+      "time": "2:42 PM",
+      "msg": "<p>ramda vs lodash/fp</p>\n",
+      "messages": [
+        {
+          "id": "3ff85743-cd88-4944-8f9a-005cc57f5414",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>comecei com lodash/fp</p>\n<p>mas ramda é melhor pq segue mais a linha correta de funcional</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "6d9c7f22-435b-47bc-8a5a-82b0e543a0e6",
+      "img": null,
+      "username": "rocali",
+      "time": "2:43 PM",
+      "msg": "<p>Como vc vê o mercado mobile hoje, em relação a RN x nativo?</p>\n",
+      "messages": [
+        {
+          "id": "541cd205-884c-44d6-845f-71f8e60258f5",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>acho que cada um se completa, mas RN vai dominar cada vez mais</p>\n<p>principalmente com Reason</p>\n<p>o próximo passo da galera do Reason é compilação nativa de OCaml, aí meua migo, vai ser outra história</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "eb71a7e6-9fe6-4a64-8881-c34132ab300e",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p>aí vai ser radical!!!!</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "mobile"
+    },
+    {
+      "id": "3c5772ba-5c01-4f1f-92de-867415ffef8e",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:43 PM",
+      "msg": "<p>Existem vagas de trabalho no brasil e mundo que exigem :reason: ?</p>\n",
+      "messages": [
+        {
+          "id": "bb3ad1aa-5359-4a5d-84bf-bbd6b3d8b2be",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>sim \\o/ a própria reason conf que tá rolando agora pegou vários sponsors de calibre grosso</p>\n<p>que tão embarcando nessa</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "f6b571a3-b704-4125-94bb-5e9dec78b6ae",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:46 PM",
+      "msg": "<p>Quais foram seus maiores desafios em escrever ReactNative com :reason: ?</p>\n",
+      "messages": [
+        {
+          "id": "8e3bf297-0822-4836-92d7-03c1ad46a89a",
+          "img": null,
+          "username": "Jabur",
+          "time": "2:46 PM",
+          "msg": "<p>Existiu algum momento em que você pensou: “Não dá pra fazer com reason, vamos usar js.“?</p>\n",
+          "highlights": "javascript js"
+        },
+        {
+          "id": "e09dfdf9-8567-429d-8d8c-536b718c5de4",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>maior desafio no começo é pq muita coisa não existe e reutliazar o que a gente já tinha</p>\n<p>sim, eu ainda pensei em recuar na metade do caminho 😂 (edited)</p>\n<p>mas minha experiência com coisas novas sempre me diz que do nada dá aquele clique mental e vc consegue</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "5eb5b08a-1850-43da-b16f-23987442589f",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:47 PM",
+      "msg": "<p>qual seria sua talk para a #react-conf 🇧🇷?</p>\n",
+      "messages": [
+        {
+          "id": "afe67537-ef35-4d96-a263-882973e66489",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>Type safe communication between graphql server and ReasonReact applications, ou um título mais curto</p>\n<p>mas mostrar como é absolutamente melhor e são trabalhar com ReasonReact e GraphQL juntos, power couples</p>\n",
+          "highlights": "graphql"
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "0236870f-4cd0-40ec-afe1-fdc8f5363554",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:48 PM",
+      "msg": "<p>Fiquei bastante curioso, porque haveria tanta diferença na compilação nativa de OCaml?</p>\n",
+      "messages": [
+        {
+          "id": "d9f92e3c-b452-448f-bb7f-a7b4e4c415dc",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>Ocaml é muito performático, comparável a C praticamente</p>\n<p>vc consegue isolar muito bem o que vc vai embarcar no seu código e cortar peso</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "d95be7e0-ef61-4ab8-985e-31d617cb2fd7",
+          "img": null,
+          "username": "nicholasess",
+          "time": "18 hours ago",
+          "msg": "<p>então voce recomendaria Ocaml para quem quer emagrecer?</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "5176bd7d-e1f4-47c2-9c7b-4ceb53b4a256",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "13 hours ago",
+          "msg": "<p>sim 😂 (edited)</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "b5ee3114-ae77-44e9-8692-b700f14326d3",
+      "img": null,
+      "username": "Bruno Gama",
+      "time": "2:49 PM",
+      "msg": "<p>qual é a metodologia razoável de se utilizar recompose num projeto?</p>\n",
+      "messages": [
+        {
+          "id": "cd4c02fd-1dfc-4ef3-99aa-df212116a9c7",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p>ganhou brinde</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "8f160cb4-0dad-4eb4-b9ea-3712eb90413f",
+          "img": null,
+          "username": "Bruno Gama",
+          "time": "18 hours ago",
+          "msg": "<p>haeuhaeuheauhae</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "9f7a71b8-c288-48fd-aee0-95360ca0be35",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "17 hours ago",
+          "msg": "<p>alsdfjaashua não botar 10 recompose num só lance</p>\n<p>deixei essa passar sem querer</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "43c48e07-f14e-4ea3-99da-520e7a7c2ded",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:49 PM",
+      "msg": "<p>Quais conceitos funcionais ainda não te deixam dormir?</p>\n",
+      "messages": [
+        {
+          "id": "bc9e5761-5b68-429f-907f-b50388af248d",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>hindley-milner lol</p>\n<p>toda a família de teoria da categoria tb ahsusa muito chão, mas muita coisa foda pra aprender</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "42f30806-97cb-486b-895b-ab8dc7dc8741",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:50 PM",
+      "msg": "<p>Qual melhor forma de lidar com async in :reason: ? Apesar de promises funcionar ok a comunidade está pensando em alguma coisa diferente?</p>\n",
+      "messages": [
+        {
+          "id": "02e43600-a6eb-4547-aac1-48b090de7f84",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>melhor forma de trabalhar com async é de forma monádica</p>\n<p>já tem implementações em OCaml e a galera do Reason já implementou o suporte da sintaxe</p>\n<p>acho que em breve eles embarcam com Reason algo</p>\n<p>o problema maior atualmente de ainda não ter uma forma monádica de trabalhar com async em Reason é pq a spec das js promises não é muito bom, principalmete pra type system</p>\n<p>Promise.resolve(Promise.resolve(1)) equivalte a <code>Promies.resolve(1)</code> em js, o que não é muito sound em type system</p>\n<p>e bem bug prone</p>\n<p>acho que eles vão abstrair uma nova api de promises pra Reason trabalhar com JS em breve</p>\n<p>e aí vai ser 🔝 (edited)</p>\n",
+          "highlights": "async javascript js"
+        },
+        {
+          "id": "0196aaab-cc84-4482-994d-74ff28114df4",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "18 hours ago",
+          "msg": "<p>top!</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "async"
+    },
+    {
+      "id": "e8702f99-c113-4398-9cca-fd6f92851462",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:51 PM",
+      "msg": "<p>Como você se sentiu quando teve o reconhecimento de botarem a logo da :astrocoders: no site do :reason: (<a href=\"https://reasonml.github.io/\">https://reasonml.github.io/</a>) ao lado de empresas gigantes como Facebook.</p>\n",
+      "messages": [
+        {
+          "id": "0b2faf0d-19aa-4e3b-9b0b-36930e0c6fcd",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p>@guilhermedecampo se quiser responder essa também.</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "7ab96288-590d-4fc0-9856-4ba23672282f",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "18 hours ago",
+          "msg": "<p>foi animal aceitarem nossa PR! Quem quiser (e estiver usando claro) é só mandar uma PR no repo.</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "github reasonml"
+    },
+    {
+      "id": "32f64271-a757-4755-88a3-9dc243595a13",
+      "img": null,
+      "username": "Bruno Gama",
+      "time": "2:51 PM",
+      "msg": "<p>Ja brincou com Elm? Se sim, tem algum comentario principalmente em comparação com o Reason?</p>\n",
+      "messages": [
+        {
+          "id": "c4c64f51-846d-44d0-9d25-ba7d09939765",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>já, há muito tempo atrás</p>\n<p>acho Reason mais próximo dos corações de programadores JS (edited)</p>\n<p>haha</p>\n<p>fazer interop entre JS e Reason é mais simples do que em Elm, com o custo de que não pode ser tão seguro às vezes</p>\n",
+          "highlights": "javascript js"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "56a2ebb1-a888-4113-a2cb-c8e0dc8b0933",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "2:52 PM",
+      "msg": "<p>Se eu te encontrar pessoalmente e quiser conversar sobre a lib ocaml Lwt qual som eu tenho que emitir pra você entender do que estou falando?</p>\n",
+      "messages": [
+        {
+          "id": "eb9b0f1b-5496-406f-ac40-23faabfa55b0",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>LOTERIA</p>\n<p>lasjdfljasdjf</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "a3dfdb34-3f13-43a5-bf6b-b2bb4dc4152f",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "18 hours ago",
+          "msg": "<p><a href=\"https://github.com/ocsigen/lwt\">https://github.com/ocsigen/lwt</a></p>\n<blockquote>\n<p>GitHub<br/>ocsigen/lwt<br/>lwt - OCaml promises and concurrent I/O.</p>\n</blockquote>\n",
+          "highlights": "github"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "5d6a5da0-7df6-4d2b-b12d-04191a396ba0",
+      "img": null,
+      "username": "tiagosouto",
+      "time": "2:54 PM",
+      "msg": "<p>você tem mentores (tanto na parte de desenvolvimento quanto empreendedor)? se sim, quem sao?</p>\n",
+      "messages": [
+        {
+          "id": "56e2285d-1500-43fa-be91-a142525db56c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>quando o lance é negócios eu praticamente sou de humanas, meu mentor nessa área é o @guilhermedecampo</p>\n<p>meu mentor original de código foi o @charlenopires (aparece aí mestre!) quando eu fiz meu técnico (edited)</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "6e6ee1ff-5ac6-46c6-9195-657c8a1f933e",
+      "img": null,
+      "username": "Jabur",
+      "time": "2:56 PM",
+      "msg": "<p>Qual foi o melhor livro que você já leu?</p>\n",
+      "messages": [
+        {
+          "id": "4539f3af-f73b-4626-907b-d68762ab62fd",
+          "img": null,
+          "username": "xereda",
+          "time": "18 hours ago",
+          "msg": "<p>Boa!</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "63b2840b-4e5a-4614-a405-1ba12ac3c895",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>O Guia do Mochileiro das Gálaxias, a trilogia de 5</p>\n<p>acho que realmente botou minha mente pra ficar imaginando as coisas que a realidade pode abrigar</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "book books livro livros"
+    },
+    {
+      "id": "0db78c5a-e103-4075-8d74-4b12a9fd285e",
+      "img": null,
+      "username": "joao",
+      "time": "2:58 PM",
+      "msg": "<p>quais características você leva em consideração quando tem que escolher uma lib? e uma linguagem?</p>\n",
+      "messages": [
+        {
+          "id": "9cb2c85e-76d9-43a3-8a2f-773c1a4cdf95",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>pra mim as máquinas que façam o trabalho duro</p>\n<p>quanto mais a ferramenta faz o trabalho pra vc melhor</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "5f864a9f-c0af-4460-afb5-a4fcdd55a64c",
+      "img": null,
+      "username": "hnordt",
+      "time": "2:58 PM",
+      "msg": "<p>Quais as principais vantagens e trade-offs ao optar por Reason ao inves de JS? (edited)</p>\n",
+      "messages": [
+        {
+          "id": "c2bfcdf7-daf7-4a36-95d4-9d3e27493de4",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>refatorar sem medo</p>\n<p>acho que pra mim esse foi o maior ponto antes de tudo</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "javascript js"
+    },
+    {
+      "id": "18e41966-7559-4604-a8b1-f378f6feab8e",
+      "img": null,
+      "username": "patrick",
+      "time": "2:59 PM",
+      "msg": "<p>Você da mentoria pra alguem?</p>\n",
+      "messages": [
+        {
+          "id": "6f8b2134-2121-47ab-b135-55edf43b3bad",
+          "img": null,
+          "username": "patrick",
+          "time": "2:59 PM",
+          "msg": "<blockquote>\n<p>tiagosouto<br/>você tem mentores (tanto na parte de desenvolvimento quanto empreendedor)? se sim, quem sao?<br/>Posted in #generalYesterday at 2:54 PM</p>\n</blockquote>\n",
+          "highlights": ""
+        },
+        {
+          "id": "bccbdcd2-8327-4543-b876-b4b96976c6fd",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "17 hours ago",
+          "msg": "<p>putz não tinha visto essa, mas acho que vale a pena responder agora</p>\n<p>eu sou tech lead aqui na :astrocoders: então eu meio que mentoro o time haha</p>\n<p>eu dou o onboarding de reason</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "350b8fd3-243e-4fcc-9c6c-b3845e4c10c9",
+          "img": null,
+          "username": "patrick",
+          "time": "17 hours ago",
+          "msg": "<p>:star-struck:</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "cc164770-b230-499c-a623-db8d9944a6d7",
+      "img": null,
+      "username": "sibelius",
+      "time": "2:59 PM",
+      "msg": "<p>como realizar testes?</p>\n",
+      "messages": [
+        {
+          "id": "ade7f098-fe3f-49c1-9dc3-99000a249b0c",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>you don&#39;t</p>\n<p>asljasdf</p>\n<p>mas quando precisar fazer, sempre que seja pra proteger alguma business logic em partes pequenas</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "59c72f06-dae6-4770-bd0d-b9395b7a1a59",
+      "img": null,
+      "username": "Jabur",
+      "time": "3:00 PM",
+      "msg": "<p>ITS ALL OVER!! Muito obrigado a todo mundo que participou, espero que todo mundo tenha se divertido e tirado suas dúvidas.</p>\n",
+      "messages": [
+        {
+          "id": "a8a8a0b8-df46-4c0e-a67c-271369a0ffa6",
+          "img": null,
+          "username": "Jabur",
+          "time": "3:00 PM",
+          "msg": "<p>@gabriel.ml Muito obrigado por aceitar o convite e ter tirado 1h do seu dia. Como ultima pergunta poderia indicar 5 pessoas que você gostaria de ver no próximo QA?</p>\n<p>Até mês que vem people!!! 😄</p>\n<p>penúltima hehe</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "1740272c-0033-4137-8017-c4a74ccfd4e5",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>@haskellcamargo</p>\n<p>@marina</p>\n<p>@hnordt</p>\n<p>Quildreen Motta, manja muitooooo de tudo, mas acho difícil a disponibilidade</p>\n<p>Cheng Lou</p>\n<p>@jaredly</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "d99778f8-42ca-421f-9073-a6e3e98e6b2e",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p><code>Cheng Lou</code> 😄 gostei desse nome..</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "1967efc9-be49-44a4-af3a-6d50690c72b8",
+      "img": null,
+      "username": "joao",
+      "time": "3:00 PM",
+      "msg": "<p>quais projetos escritos em reason você recomenda acompanhar?</p>\n",
+      "messages": [
+        {
+          "id": "23d3fdd4-6a54-475d-8959-a7c0125c916f",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>bs-react-native</p>\n<p>reform</p>\n<p>nact</p>\n<p>redex.github.io</p>\n<p>reroute-native (da callstack, que ainda vão abrir em breve)</p>\n",
+          "highlights": "github native react"
+        },
+        {
+          "id": "e85a22ad-2d7a-4e4e-8a9d-339347d9ab86",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "18 hours ago",
+          "msg": "<p>reform ❤️ :astrocoders:</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "314bc2f1-0368-4c1b-80a6-cd076aa904e2",
+      "img": null,
+      "username": "hnordt",
+      "time": "3:00 PM",
+      "msg": "<p>Qual filosofia ou conceito vc aplica pra testar realmente o que importa / testar de forma eficiente?</p>\n",
+      "messages": [
+        {
+          "id": "6ff30c5e-dec8-4116-9faf-99b283636821",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>acho que o que importa é o que entra e sai da função</p>\n<p>não gosto de testar muito side effects pq acaba precisando de mock ou DI, o que obscurece a finalidade do  código de testes</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "76977b91-0843-43c9-a36b-abbe454e899f",
+      "img": null,
+      "username": "tgmarinho",
+      "time": "3:02 PM",
+      "msg": "<p>o que vc acha de mais legal no Meteor?</p>\n",
+      "messages": [
+        {
+          "id": "23a002e6-daaf-453f-8673-5cd9605a716e",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "18 hours ago",
+          "msg": "<p>reactivity out-of-the-box &amp; account system &amp; mongo pra mim. Se quiser fazer um protótipo rapidão é o caminho. Monolito FTW</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "9878e851-562d-41cf-ba07-305f49ca7859",
+          "img": null,
+          "username": "gabriel.ml",
+          "time": "18 hours ago",
+          "msg": "<p>flexibilidade e prototipação</p>\n<p>mas 15 minuto pra bootar SAD =(</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "9f5d342c-c266-4728-8c94-098cd265a399",
+          "img": null,
+          "username": "guilhermedecampo",
+          "time": "18 hours ago",
+          "msg": "<p>o custo de ter all-in-one =(</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "7858fc7e-0c98-4022-b22d-2732e795f592",
+          "img": null,
+          "username": "tgmarinho",
+          "time": "18 hours ago",
+          "msg": "<p>legal, estou curtindo muito tbm tudo isso, no começo achei muito mágico, e eu queria aprender node pra aprender depois meteor... então comecei a fazer as coisas com node e configurar webpack, ai curti ainda mais o Meteor, só deixar ele fazer o trampo dele e o &quot;nosso&quot;!</p>\n",
+          "highlights": "meteor"
+        }
+      ],
+      "highlights": "meteor"
+    },
+    {
+      "id": "314521c5-df5e-4489-907f-54e9944faaf7",
+      "img": null,
+      "username": "tgmarinho",
+      "time": "3:02 PM",
+      "msg": "<p>tem prorrogação não =( rsrs</p>\n",
+      "messages": [
+        {
+          "id": "33cee234-82bb-444d-85bd-8be9abe96a15",
+          "img": null,
+          "username": "tgmarinho",
+          "time": "18 hours ago",
+          "msg": "<p>massa to estudando e trabalhando com as stacks que essa turma da Astrocoders trabalha <a href=\"https://github.com/CodeFTW/Stack\">https://github.com/CodeFTW/Stack</a></p>\n<blockquote>\n<p>GitHub<br/>CodeFTW/Stack<br/>Stack - Tecnology we are learning and using in Code FTW</p>\n</blockquote>\n",
+          "highlights": "github"
+        },
+        {
+          "id": "67b52daa-f8c4-466f-bb23-00341c79054a",
+          "img": null,
+          "username": "Jabur",
+          "time": "18 hours ago",
+          "msg": "<p>hehe, podia ter ne.</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "bb3ff762-b89c-484a-b8c3-c40eccad3eb3",
+          "img": null,
+          "username": "tgmarinho",
+          "time": "18 hours ago",
+          "msg": "<p>pois é, tava lendo as respostas ainda, na hora de bolar uma acabou hahahah =P foi massa !</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "adbb27b4-f818-44bd-9e3a-086869a68dd2",
+      "img": null,
+      "username": "hnordt",
+      "time": "3:03 PM",
+      "msg": "<p>esses Q&amp;As sao tao eficientes (ou mais) quanto pair programming pra aprender novas ideias, parabens :entria:</p>\n",
+      "messages": [],
+      "highlights": ""
+    }
+  ]
+}
