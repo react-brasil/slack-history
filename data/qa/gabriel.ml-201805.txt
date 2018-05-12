@@ -1,0 +1,1348 @@
+sibelius [2:01 PM]
+mongodb ou postgres (sql related) ?
+
+gabriel.ml [18 hours ago]
+atualmente ando preferindo postgres
+
+gabriel.ml [18 hours ago]
+aggregations are just better :tm:
+
+gabriel.ml [18 hours ago]
+e com ocaml fica melhor de trabalhar pq os tipos podem ser inferidos com ppx
+
+gabriel.ml [18 hours ago]
+e com reason tb
+
+raphox [18 hours ago]
+poxa. pra mim isso é grego.
+se não for muito trabalho. tem como linkar referências?
+
+Vinicius Rangel [18 hours ago]
+precisa ser postgres ou vc usou como referência para um sql?
+
+Vinicius Rangel [18 hours ago]
+o oracle tem a versão free de 10gb, é bem bom
+
+gabriel.ml [9 hours ago]
+opa, só vi aqui a agora, acho que vale a pena continuar a thread um pouco
+
+por exemplo, se vc tem uma query do tipo em js
+
+```pg.query("insert app_users (name) values ($1)", [name]);```
+
+o `name` no tb é uma row definada como string, mas o que te previne tentar adicionar um int ali ou um valor nulo pra descobrir que deu pau somente em runtime?
+
+ppx é uma ferramenta de ocaml que permite "reescrever" em tempo de compilação um código, no caso existe uma ppx que permite vc ler a schema do seu banco de dados e garantir que vc esteja adicionando os valores corretos na hora de dar um insert ou update tornando impossível tentar adicionar um dado incorreto no banco
+
+é o mesmo que acontece com a ppx de graphql, que torna impossível escrever e consumir uma query de forma errada
+
+refs
+
+https://github.com/mhallin/graphql_ppx
+
+https://github.com/darioteixeira/pgocaml (Não foi escrito em ppx, mas no "predecessor", o camlp4)
+
+http://ocamllabs.io/doc/ppx.html
+
+com ppx vc consegue alterar a sintaxe do ocaml, gerar tipos novos, adicionar novos errors no compilador etc
+
+o Reason e o ReasonReact são ppxs de ocaml, ou seja, ocaml reescrito em tempo de compilação e com sintaxe alterada
+>GitHub<br/>mhallin/graphql_ppx<br/>graphql_ppx - GraphQL PPX rewriter for Bucklescript/ReasonML
+
+>GitHub<br/>darioteixeira/pgocaml<br/>pgocaml - PG&#39;OCaml provides an interface to PostgreSQL databases for OCaml applications. It uses Camlp4 to extend the OCaml syntax, enabling one to directly embed SQL statements inside the OCam...
+
+>ocamllabs.io<br/>PPX<br/>The PPX language feature provides a new API for syntactic extensions in OCaml. PPX uses attributes to allow type-driven code generation, extension nodes for ...
+
+gabriel.ml [9 hours ago]
+https://react-brasil.slack.com/archives/C1EDVPBQC/p1526058247000578?thread_ts=1526058113.000019&cid=C1EDVPBQC
+
+não é limitado apenas a postgres, dá pra adaptar pra outros sqls tb, não sei se tem algum bem polido pra outros
+Vinicius Rangel
+precisa ser postgres ou vc usou como referência para um sql?
+From a thread in #generalYesterday at 2:04 PM
+
+sibelius [8 hours ago]
+Ppx nada mais é que macros
+
+gabriel.ml [8 hours ago]
+acho que no caso do ocaml, com uma sintaxe mais rígida, vai mais além pq vc pode criar novas sintaxes e não só gerar código, que é o que eles chamam de extension points
+
+https://whitequark.org/blog/2014/04/16/a-guide-to-extension-points-in-ocaml/
+https://jaredforsyth.com/posts/template-based-macros-for-reason-ocaml/
+whitequark.org
+A guide to extension points in OCaml - whitespace
+Extension points (also known as “-ppx syntax extensions”) is the new API for syntactic extensions in OCaml. The old API, known as camlp4 …
+>jaredforsyth.com<br/>Template-based macros in Reason/OCaml | Jared Forsyth.com<br/>Thoughts about a friendlier macro system.
+
+gabriel.ml [8 hours ago]
+eu ainda não manjo muito dessa parte da linguagem ainda, então falo mais por alto mesmo (edited)
+
+sibelius [1 hour ago]
+Da para fazer o mesmo usando babel
+
+---
+
+sibelius [2:02 PM]
+Flow vs TS vs Reason?
+
+gabriel.ml [18 hours ago]
+o sistema de tipos de reason é melhor pq vc não usa ele apenas como uma avó que bate na sua mão caso vc faça algo errado, vc consegue modelar muito bem problemas nele
+
+gabriel.ml [18 hours ago]
+Primeiro que o setup é muito fácil. A ferramenta de Reason to JS é um combo de babel+eslint+flow/ts, não tem     que ficar de muito nhenhenhen com config.
+
+gabriel.ml [18 hours ago]
+Segundo, um dos principais motivos antes de qualquer outra coisa foi cortar toda uma classe de bugs de regressão . Por exemplo, quando vc trabalha com rotas e alguém mudou a prop de uma roda de `id` para `userId` mas esqueceu de atualizar em todos os lugares. Essa categoria de bugs é muito chato pq quebra a expectativa dos usuários/clientes, algo que estava funcionando para de funcionar.
+
+É claro que com uma suite de testes unitário um erro assim é relativamente fácil de ser detectado e com code review o problema é que vc tem que confiar tanto no programador que fez o teste ou na programadora que está fazendo o review.
+
+Com Reason é muito fácil eliminar completamente um bug desses fazendo com que ele não possa ao menos existir em primeiro lugar. Se vc muda uma prop de um component em Reason o compilador vai te falar exatamente todos os lugares que vc precisa corrigir.
+
+---
+
+sibelius [2:02 PM]
+como começou a astrocoders :astrocoders: ?
+
+gabriel.ml [18 hours ago]
+conheci o @guilhermedecampo num forum de meteor
+
+gabriel.ml [18 hours ago]
+a gente começou a astro antes mesmo de se conhecer fisicamente ahsuash
+
+gabriel.ml [18 hours ago]
+tudo maluco
+
+gabriel.ml [18 hours ago]
+e lá pra cá a gente evoluiu muito
+
+gabriel.ml [18 hours ago]
+temos um team muito fera
+
+Jabur [18 hours ago]
+altos time!! só fera mesmo!
+
+---
+
+patrick [2:03 PM]
+Vou começar um projeto web hoje, não sei nada de :reason: , você me indica a colocar na stack ?
+
+gabriel.ml [18 hours ago]
+sim, é possível começar gradualmente com reason
+
+gabriel.ml [18 hours ago]
+vc consegue ter alguns arquivos em .re e importar ele em outros modules js numa boa
+
+gabriel.ml [18 hours ago]
+mas recomendo cair de cabeça
+
+gabriel.ml [18 hours ago]
+e começar com tudo
+
+gabriel.ml [18 hours ago]
+a comunidade é recente mas já temos muitas ferramentas prontas, como routing, bindings pra uma quantidade boa de libs
+
+gabriel.ml [18 hours ago]
+redex.github.io é um projeto do glenns pra registrat tudo que precisa, o server do discord tb é muito fera, o mestres sempre tão por lá pra ajudar a galera
+
+patrick [18 hours ago]
+Valeu MITO!
+
+---
+
+Jabur [2:03 PM]
+Como foi a curva de aprendizado do :reason: ?
+
+gabriel.ml [18 hours ago]
+não vou mentir, foi tenebrosa
+
+gabriel.ml [18 hours ago]
+asjfdasj
+
+gabriel.ml [18 hours ago]
+pq é uma questão de mudar de mindset
+
+
+gabriel.ml [18 hours ago]
+tipo quando vc usava angular/blaze e viu o React pela primeira vez e não entendeu pq as coisas eram daquele jeito e vc fica tentando fazer do jeito antigo e não consegue extrair todo o potêncial
+
+gabriel.ml [18 hours ago]
+mas com 1-2 meses vc já consegue sentir o valor de todo o tooling
+
+---
+
+patrick [2:04 PM]
+O que você me recomenda pra eu aprender oCaml ?
+
+gabriel.ml [18 hours ago]
+opa
+
+gabriel.ml [18 hours ago]
+ocaml eu recomendo o https://dev.realworldocaml.org/
+
+gabriel.ml [18 hours ago]
+livro muito bom
+
+gabriel.ml [18 hours ago]
+e tb entrar no server do discord do reason
+
+gabriel.ml [18 hours ago]
+O site deles é um bom lugar pra começar.  https://reasonml.github.io/ e o do https://reasonml.github.io/reason-react/ tb, quando eu comecei não tinha muito material. Agora tem bastante vídeo no YouTube e demos de apps feitas. Meu conselho é não desanimar, vc tem que reaprender várias coisas, readaptar a forma de pensar, aprender e abraçar as limitações da linguagem. OCaml é uma linguagem com regras mais rígidas se comparadas com JS, mas tudo isso ajuda a construir a previsibilidade e estabilidade da linguagem e do tooling dela. Outro lugar muito importante é a comunidade no https://discord.gg/reasonml, a galera ajuda muito.
+>reasonml.github.io<br/>Reason · Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.<br/>Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.
+
+>reasonml.github.io<br/>ReasonReact · All your ReactJS knowledge, codified.<br/>All your ReactJS knowledge, codified.
+
+>Discord<br/>Discord - Free voice and text chat for gamers<br/>Step up your game with a modern voice & text chat app. Crystal clear voice, multiple server and channel support, mobile apps, and more. Get your free server now! (62 kB)
+
+guilhermedecampo [18 hours ago]
+https://egghead.io/courses/get-started-with-reason
+
+patrick [17 hours ago]
+@guilhermedecampo FREEE
+
+guilhermedecampo [17 hours ago]
+:thinking_face:  esse curso do egghead é free :thinking_face:
+
+---
+
+Jabur [2:04 PM]
+Sente falta de trabalhar com :jsicon: ?
+
+gabriel.ml [18 hours ago]
+ainda trabalho \o/ (edited)
+
+gabriel.ml [18 hours ago]
+eu gosto muito de JS apesar de todos os problemas
+
+gabriel.ml [18 hours ago]
+haha
+
+gabriel.ml [18 hours ago]
+gosto da flexibilidade
+
+gabriel.ml [18 hours ago]
+tem vezes que vc não sabe a priori com o que tá lidando e js deixa mais fácil
+
+---
+
+sibelius [2:04 PM]
+apollo vs relay?
+
+gabriel.ml [18 hours ago]
+eu uso apollo seguindo os padrões do relay ahsusa
+
+gabriel.ml [18 hours ago]
+mas pq eu acho o apollo mais flexível e tb pq só tá rolando ele no reason
+
+gabriel.ml [18 hours ago]
+eu gosto muito dos patterns do relay, aprendi a gostar na verdade
+
+---
+
+sibelius [2:04 PM]
+editor e pq?
+
+gabriel.ml [18 hours ago]
+nvim + tmux, agilidade brutal
+
+gabriel.ml [18 hours ago]
+vc não tira a mão do teclado pra nada
+
+gabriel.ml [18 hours ago]
+é muito foda refatorar código com vim, 100x mais rápido que VSCOde
+
+gabriel.ml [18 hours ago]
+e mais leve tb
+
+willian [18 hours ago]
+concordo 100%!
+
+---
+
+vcapretz [2:04 PM]
+O que acha de prettier? Pretendo começar a usar mas a parte de ter algo modificando o código por mim ainda me da um pouco de medo (e isso deixa meu time resistente também), vale mesmo a pena?
+
+gabriel.ml [18 hours ago]
+recomendo 120%
+
+gabriel.ml [18 hours ago]
+deixo o código uniforme no time todo, fica mais fácil de fazer review se todo mundo segue a mesma linha
+
+gabriel.ml [18 hours ago]
+e vc perde muitos segundos formatando manualmente
+
+gabriel.ml [18 hours ago]
+embrace the community
+
+raphox [18 hours ago]
+@vcapretz tem link de referência?
+
+vcapretz [18 hours ago]
+@raphox https://github.com/prettier/prettier
+>GitHub<br/>prettier/prettier<br/>prettier - Prettier is an opinionated code formatter.
+
+tiagocedrim [18 hours ago]
+A propria documentação é muito boa
+
+raphox [18 hours ago]
+é tipo um jslint só que na hora de salvar ele já altera do código seguindo as regras?
+
+vcapretz [18 hours ago]
+Isso! Basicamente isso :grin:
+
+hnordt [17 hours ago]
+@raphox soh uma ressalva, ele eh um jslint apenas pra formatacao de codigo, nao aplica nenhuma regra a nivel tecnico
+
+---
+
+Jabur [2:06 PM]
+Se eu tenho um projeto grande hoje com javascript(React), valeria a pena um “refactor de linguagem” para :reason:?
+
+gabriel.ml [18 hours ago]
+valeria \o/ mas recomendo ir por partes tb
+
+gabriel.ml [18 hours ago]
+refatorar código com Reason é :heart:
+
+gabriel.ml [18 hours ago]
+pq vc pode mudar tudo sem medo de errar
+
+gabriel.ml [18 hours ago]
+o compilador não te deixa fazer 90% das merdas que vc geralmente faz por esquecer detalhes
+
+---
+
+patrick [2:07 PM]
+Quando o cliente deixa na sua mão a stack que vai ser desenvolvida,  você diz que vai de :reason: . O cliente pede pra você explicar a stack, como se dá isso? Aceitam de boa?
+
+gabriel.ml [16 hours ago]
+depende do cliente, alguns só perguntam se é seguro ahsusa, a gente teve um cliente recente que entrou em contato com a gente exatamente pq a gente usa :reason: :frenetic-parrot:
+
+
+patrick [16 hours ago]
+hahahaha!
+
+---
+
+sibelius [2:08 PM]
+open source vale a pena?
+
+gabriel.ml [18 hours ago]
+vale demais
+
+gabriel.ml [18 hours ago]
+como open source vc tem a disposição a uma força intelectual coletiva que sua empresa nunca seria capaz de contratar
+
+---
+
+sibelius [2:08 PM]
+fullstack existe?
+
+gabriel.ml [18 hours ago]
+:unicorn_face:
+
+gabriel.ml [18 hours ago]
+existe
+
+gabriel.ml [18 hours ago]
+acho importante em todo time ter um fullstack
+
+gabriel.ml [18 hours ago]
+é a cola que une as tribos
+
+gabriel.ml [18 hours ago]
+ahusaas
+
+gabriel.ml [18 hours ago]
+mesmo tendo gente mais especializada e o fullstack não podendo saber afundo de tudo essa pessoa ajuda como um tradutor do time pra ajudar em perspectivas
+
+---
+
+Jabur [2:08 PM]
+O reason-react resolve bastante coisa pro front em :reason: , mas e no back, como fizeram?
+
+gabriel.ml [18 hours ago]
+no back ainda não tem muito projeto pronto
+
+gabriel.ml [18 hours ago]
+mas tem algumas coisas no forno
+
+gabriel.ml [18 hours ago]
+a gente usa muito pra worker
+
+gabriel.ml [18 hours ago]
+jobs de background
+
+---
+
+matheus_gsilva [2:08 PM]
+Não conheço a comunidade reason, como está a taxa de adoção de reason na interwebs?
+
+gabriel.ml [18 hours ago]
+muito boa, a galera da callstack e os big players já tão entrando na rodada
+
+gabriel.ml [18 hours ago]
+o cara do http://2ality.com/ já anda muito na comunidade
+
+gabriel.ml [18 hours ago]
+sem falar que tem o Facebook por trás
+
+gabriel.ml [18 hours ago]
+eu sinceramente acho que Reason é o futuro da comunidade JS
+
+---
+
+sibelius [2:09 PM]
+bitcoin é o futuro? devo comprar? e outras altcoins?
+
+gabriel.ml [18 hours ago]
+sim, viva a descentralização \o/
+
+gabriel.ml [18 hours ago]
+compra nano
+
+gabriel.ml [18 hours ago]
+ethereum
+
+gabriel.ml [18 hours ago]
+esses tem potencial
+
+---
+
+sibelius [2:09 PM]
+ideas para bitcoin/blockchain?
+
+gabriel.ml [18 hours ago]
+uma api que facilite receber dinheiro fiat em cripto
+
+---
+
+guilhermedecampo [2:10 PM]
+Quem são suas influências no mundo Open Source?
+
+gabriel.ml [18 hours ago]
+dan, arunoda, toda a galera do MDG, a galera da :entria: com certeza, cheng lou, jared e jamesbuilds
+
+---
+
+patrick [2:11 PM]
+Pra termos uma noção de curva de aprendizado, o que você acha mais difícil pra uma pessoa `que não sabe nenhum dos assuntos` aprender? VIM ou :reason:  ?
+gabriel.ml
+>nvim + tmux, agilidade brutal<br/>From a thread in #generalYesterday at 2:09 PM
+
+gabriel.ml [18 hours ago]
+vim, 5 semana pra aprender a fechar
+
+patrick [18 hours ago]
+kkkkkkkkkkkkkkkkkkkk :thumbsup: (edited)
+
+---
+
+guilhermedecampo [2:12 PM]
+O que você gostaria que um parente ou pessoa conhecida tivesse te avisado/ensinado sobre a vida e sobre o trabalho?
+
+gabriel.ml [18 hours ago]
+saber que vc se cobra bem mais do que os outros realmente esperam
+
+---
+
+Jabur [2:13 PM]
+Como costuma ser seu dia na :astrocoders: ?
+
+gabriel.ml [18 hours ago]
+atualmente, entro as nove e saiu as 18h do office
+
+toda segunda eu me reuno com o @guilhermedecampo e discutimos as tarefas da semana e distrubuimos no pivotal pra galera
+
+o resto da semana basicamente é mão na massa e code review
+
+gabriel.ml [18 hours ago]
+e memes
+
+gabriel.ml [18 hours ago]
+:dollynho:
+
+---
+
+guilhermedecampo [2:13 PM]
+Quais as vantagens e desvantagens de ter uma empresa no Brasil?
+
+gabriel.ml [18 hours ago]
+impostos
+
+gabriel.ml [18 hours ago]
+vantagem: muita gente esforçada
+
+---
+
+guilhermedecampo [2:14 PM]
+Você já sofreu algum preconceito? Como lidou com isso?
+
+gabriel.ml [18 hours ago]
+creio que não :thinking_face:
+
+---
+
+guilhermedecampo [2:15 PM]
+No dia a dia o que te mantém motivado?
+
+gabriel.ml [18 hours ago]
+saber que existe muito conhecimento e coisa foda que eu ainda não descobri
+
+gabriel.ml [18 hours ago]
+sou viciado em absorver coisas
+
+---
+
+patrick [2:15 PM]
+Você acha que a falta do inglês torna o aprendizado de libs (:reason: , :react: , :redux: , :graphql: , :flow:, ...) mais difícil? Se sim, qual a sua sugestão pra aprender inglês?
+
+gabriel.ml [18 hours ago]
+eu acho que sim
+
+gabriel.ml [18 hours ago]
+pq dificulda o reasoning
+
+gabriel.ml [18 hours ago]
+vc vê muito termo em inglês (edited)
+
+gabriel.ml [18 hours ago]
+a comunidade global é inglês, se vc não manja muito te limita as suas fontes
+
+gabriel.ml [18 hours ago]
+e eu realmente prefiro raciocionar em inglês, acho uma lingua mais flexível e fácil de montar conjecturas
+
+patrick [18 hours ago]
+E qua sua sugestão pra aprender inglês?
+
+gabriel.ml [13 hours ago]
+juntar o útil ao agradável, assistir séries com legenda em inglês pra ir absorvendo
+
+---
+
+matheus_gsilva [2:18 PM]
+Javascript all the things? No meio de tanta coisa pra se estudar, vc acha que o meio javascript é a coisa a se focar?
+
+gabriel.ml [18 hours ago]
+acho \o/
+
+gabriel.ml [18 hours ago]
+vc não precisa aprender 14 linguagens pra ser fullstack hoje em dia
+
+gabriel.ml [18 hours ago]
+com js vc domina tudo
+
+gabriel.ml [18 hours ago]
+e depois recomendo ir pra ocaml e reason
+
+gabriel.ml [18 hours ago]
+pra complementar
+
+---
+
+guilhermedecampo [2:18 PM]
+Qual sua opinião sobre políticas públicas e o você faria se fosse presidente do Brasil no âmbito tecnológico?
+
+gabriel.ml [18 hours ago]
+daria benefício fiscal pra provedores de internet
+
+gabriel.ml [18 hours ago]
+tudo começa com uma boa conexão
+
+---
+
+vcapretz [2:19 PM]
+O que recomenda de livros técnicos e não técnicos?
+
+gabriel.ml [18 hours ago]
+não sou muito de ler livros :confused:
+
+gabriel.ml [18 hours ago]
+gosto mais de artigos, ler código e trocar ideia
+
+gabriel.ml [18 hours ago]
+acho mais fácil de absorver
+
+gabriel.ml [18 hours ago]
+recomendo acompanhar os gists da galera
+
+gabriel.ml [18 hours ago]
+sempre tem uns tesouros
+
+---
+
+Jabur [2:20 PM]
+Explica melhor pra gente oque é o reason-react? :react: + :reason:
+https://github.com/reasonml/reason-react
+>GitHub<br/>reasonml/reason-react<br/>reason-react - Reason bindings for ReactJS
+
+gabriel.ml [18 hours ago]
+é a maneira mais sana atualmente de criar interfaces pra web e native \o/
+
+gabriel.ml [18 hours ago]
+ReasonReact é um "binding" de React JS pra reason, vc consegue usar tudo que tá na comunidade em JS nele e ter um código React mais robusto e fácil de manter
+
+---
+
+vcapretz [2:20 PM]
+O que você considera um dev front sênior? Como fazer pra chegar lá?
+
+gabriel.ml [18 hours ago]
+acho a classificação por senioridade meio limitante pra separar os talentos
+
+gabriel.ml [18 hours ago]
+ler muito, procastinar de forma "útil", saber quando descansar e interajir com a comunidade
+
+gabriel.ml [18 hours ago]
+eu me considero fulstack sênior * 0.7%, com margem de 0.1% lol (edited)
+
+---
+
+sibelius [2:21 PM]
+rest vs graphql?
+
+gabriel.ml [18 hours ago]
+graphql com certeza
+
+gabriel.ml [18 hours ago]
+acho que a abstração de graphql permite que vc expresse seus dados de forma mais limpa e clara
+
+---
+
+patrick [2:21 PM]
+Vale a pena alguém largar um emprego estável e entrar fulltime no mundo dos freelas+opensource ?
+
+Jabur [18 hours ago]
+:open_mouth:
+
+adelgado [18 hours ago]
+Pesadíssima
+
+gabriel.ml [18 hours ago]
+acho, se vc for jovem sem muitas responsas (família, filhos) e quiser ter experiência não há caminho melhor
+
+gabriel.ml [18 hours ago]
+interagir com pessoas e open source te tornam um programador e uma pessoa melhor
+
+willian [18 hours ago]
+@patrick acho que freelas e opensource são coisas distintas
+Eu larguei emprego estável CLT em 2013 para trabalhar de casa, montei (e continuo montando) um escritório em um cômodo do apê e desde então trabalho full-time com empresas do exterior, ganhando quase 5x mais do que eu ganhava antes
+
+patrick [18 hours ago]
+Maravilha @willian , isso é meta de vida pra mim, mas atualmente estou inseguro quanto ao inglês! :confused:
+
+patrick [18 hours ago]
+Mas ja estou trabalhando nisso! :fire:
+
+Jabur [18 hours ago]
+@patrick vamos bater um papo em ingles hoje? tem que perder o medo falando.
+
+patrick [18 hours ago]
+@Jabur :heart:
+
+willian [18 hours ago]
+@patrick quando eu comecei eu tinha um nível de inglês do intermediário ao avançado, ainda errava muito mais do que hoje. Mas dei a cara a tapa, algumas portas se fecharam para mim na época. Mas aproveitei as que se abriram e fui melhorando cada vez mais conforme a insegurança ia diminuindo.
+Atualmente trabalho pela Toptal (https://www.toptal.com/#unite-proven-devs-now) e fui recrutador da empresa, fazia entrevistas com devs de diversos países que queria entrar na plataforma. Tudo isso em inglês.
+>toptal.com<br/>Toptal - Hire Freelance Talent from the Top 3%<br/>Toptal enables start-ups, businesses, and organizations to hire freelancers from a growing network of top talent in the world. Find quality talent to work full-time, part-time, or hourly who will seamlessly integrate into your team. (37 kB)
+
+---
+
+sibelius [2:21 PM]
+qual app/idea/projeto você gostaria que existisse?
+
+gabriel.ml [18 hours ago]
+uma forma melhor de ajudar pessoas ociosas a ganharem dinheiro e movimentar uma economia mais coletiva
+
+---
+
+Jabur [2:23 PM]
+Porque e quando começou a programar?
+
+gabriel.ml [18 hours ago]
+comecei com 13 anos, num PC sem internet ashuas
+
+gabriel.ml [18 hours ago]
+mais pq a única coisa que tinha na máquina era um livro da o'rielly :joy:
+
+gabriel.ml [18 hours ago]
+e tempo eu tinha bastante
+
+gabriel.ml [18 hours ago]
+e tb adoro sentir que eu sou capaz de construir algo e dar vida aquilo
+
+gabriel.ml [18 hours ago]
+eu considero programas uma forma de seres vivos mais simples, pura arte
+
+---
+
+matheus_gsilva [2:23 PM]
+O que vc faz fora do trabalho pra poder recarregar tuas baterias? (edited)
+
+gabriel.ml [18 hours ago]
+memes
+
+gabriel.ml [18 hours ago]
+passar tempo com minha mulher
+
+gabriel.ml [18 hours ago]
+netflix e canais de ciência aleatórios do youtube
+
+gabriel.ml [18 hours ago]
+open source tb, pq vc pode criar algo que sua existência não necessariamente depende daquilo, vc pode liberar seu potencial criativo e manter sua mente alegre
+
+---
+
+Nic [2:23 PM]
+Como está a Comunidade do Brasil de :reason:, :react:, :graphql: , :relay:, :flow: .. vs o cenário lá fora?
+
+gabriel.ml [18 hours ago]
+acho que por causa das dificilidades, conexão ruim, computador bom caro, os br ficaram melhores
+
+gabriel.ml [18 hours ago]
+os ventos fortes do norte criaram os vikings
+
+gabriel.ml [18 hours ago]
+a gente é bem melhor do que a gente pensa que é
+
+gabriel.ml [18 hours ago]
+dunning-krueger
+
+
+gabriel.ml [18 hours ago]
+acho que a comunidade br tb é muito bem vista lá fora
+
+---
+
+sibelius [2:24 PM]
+o que você aprendeu essa semana?
+
+gabriel.ml [18 hours ago]
+aprendendo a usar figma pra modelar exaustivamente uma ideia antes de codar
+
+gabriel.ml [18 hours ago]
+e tb a usar ocaml nativo com postgres
+
+hnordt [18 hours ago]
+@gabriel.ml a parte mais importante da talk na minha opiniao: modelar exaustivamente uma ideia antes de codar
+
+gabriel.ml [18 hours ago]
+:point_up: the devil is in the edge cases
+
+---
+
+sibelius [2:24 PM]
+qual sideproject você está fazendo?
+
+gabriel.ml [18 hours ago]
+uma api que una render props e hocs
+
+gabriel.ml [18 hours ago]
+e suspense
+
+gabriel.ml [18 hours ago]
+quando eu achar o gif demo eu mando haus
+
+---
+
+Jabur [2:26 PM]
+Sente falta da flexibilidade do js+flow? Ou o :reason: também te traz isso?
+
+gabriel.ml [18 hours ago]
+sentia mais falta antes pq eu tentava fazer do js way no reason
+
+gabriel.ml [18 hours ago]
+depois que eu abracei mais os limites do :reason: minha mente abriu um terceiro olho
+
+---
+
+dexfs [2:29 PM]
+Para quem mudou de uma outra linguagem para o JS, o que te motivou ? Como foi o processo e as dificuldades?
+
+gabriel.ml [18 hours ago]
+a maior dificuldade é muita de mindset, a maior vantagem é abrir a mente pra mais possibilidade de expressar ideias no código e eliminar bugs de regressão bestas
+
+gabriel.ml [18 hours ago]
+tipo quando alguém muda os arg de uma função no utils e não atualiza no projeto inteiro
+
+gabriel.ml [18 hours ago]
+com :reason: isso é impossível
+
+gabriel.ml [18 hours ago]
+vc refatora e ele te mostra todos os locais que vc tem que atualizar
+
+gabriel.ml [18 hours ago]
+sem esforço extra
+
+gabriel.ml [18 hours ago]
+e antes do cliente ver quebrando em produção
+
+nicholasess [18 hours ago]
+que foda :heart:
+
+---
+
+patrick [2:31 PM]
+Tem vaga na :astrocoders: ?
+
+gabriel.ml [18 hours ago]
+estamos de braços apertos
+
+nicholasess [18 hours ago]
+abertos*
+
+patrick [18 hours ago]
+Achei que era algum trocadilho, etc... estava tentando decifrar
+
+---
+
+guilhermedecampo [2:33 PM]
+Você já usou ou usa alguma substância para aumentar a produtividade?
+
+gabriel.ml [18 hours ago]
+café com uisque conta? asuhasuas
+
+gabriel.ml [18 hours ago]
+já pensei em nootropico, mas me fez pensar que é melhor ficar mais saudável e comer melhor
+
+---
+
+patrick [2:34 PM]
+Quais apps utiliza diariamente que são indispensáveis? (edited)
+
+gabriel.ml [18 hours ago]
+google now sempre me mantém atualizado com as coisas que eu me importo
+
+gabriel.ml [18 hours ago]
+twitter tb é o melhor feed pra saber o que a galera foda anda fazendo
+
+---
+
+jcm [2:34 PM]
+onde vc gostaria de está daqui 5 anos? Tanto fisicamente quanto profissionalmente
+
+gabriel.ml [18 hours ago]
+sussegado e investindo em agrotech e "housingtech" \o/
+
+gabriel.ml [18 hours ago]
+quero muitor trabalhar com uma forma de dar moradia de qualidade e acessível pra todo mundo
+
+---
+
+sibelius [2:35 PM]
+redux vs mobx vs context api?
+
+gabriel.ml [18 hours ago]
+estado local + graphql \o/
+
+---
+
+Nic [2:37 PM]
+Styled-components vale a pena?
+
+gabriel.ml [18 hours ago]
+vale a galinha toda
+
+gabriel.ml [18 hours ago]
+faz mais de um ano desde que eu escrevi meu último arquivo css
+
+a abstração de estilos de Css in JS é muito melhor, pq libera todo o poder de uma full turing power language em CSS
+
+willian [18 hours ago]
+Concordo 100% aqui tb, só prefiro glamorous do que styled-components. Mas isso é uma preferência pessoal :slightly_smiling_face:
+
+brunolemos [17 hours ago]
+Glamorous está para ser deprecated em favor do emotion ou styled-components https://twitter.com/kentcdodds/status/994230853189320705?s=21
+>Kent C. Dodds @kentcdodds<br/>I'm sorta thinking of deprecating glamorous :lipstick: in favor of emotion :female-singer:
+
+(Not styled-components though. emotion can do objects and strings of CSS, also it's smaller and faster).
+TwitterMay 9th at 12:01 PM
+
+sibelius [17 hours ago]
+a motivação do glamorous foi só pq o sc não suporta objects
+
+sibelius [17 hours ago]
+o Max fez isso em 16 linhas e boa
+
+sibelius [17 hours ago]
+agora suporta
+
+brunolemos [17 hours ago]
+Agora falta a parte do "smaller and faster"
+
+sibelius [17 hours ago]
+small and fast enough
+
+willian [13 hours ago]
+@brunolemos valeu por ter compartilhado, não tinha visto este tweet de 2 dias atrás
+Eu realmente prefiro o glamorous por ser tudo em objects e não strings.
+
+brunolemos [13 hours ago]
+@willian como o sibelius comentou, agora o styled-components tbm suporta objetos, e o emotion já suportava, então todos suportam
+
+brunolemos [13 hours ago]
+https://twitter.com/mxstbr/status/994499829379338240
+>Max Stoiber @mxstbr<br/>@kentcdodds @jxnblk 8 minutes later: https://github.com/styled-components/styled-components/pull/1732<br/>+16, -3 is all it took :wink:<br/>TwitterMay 10th at 5:50 AM
+
+brunolemos [13 hours ago]
+https://github.com/styled-components/styled-components/pull/1732
+>GitHub<br/>First-class object support by mxstbr · Pull Request #1732 · styled-components/styled-components<br/>With this patch you can now do const Component = styled.div({ color: 'blue' }) This is in response to https://mobile.twitter.com/kentcdodds/status/994254700651339776, /cc @kentcdodds
+
+willian [13 hours ago]
+é, eu vi esse PR enquanto lia a outra thread. Mas agora me resta procurar benchmarks para ver qual lib compensa mais (performance e tamanho)
+
+willian [13 hours ago]
+pelo o que vi o emotion continua sendo mais leve e, dizem, mais rápido do que o styled-components
+
+hnordt [11 hours ago]
+prefiro JSXStyle, que tem a mesma API do React Native `<View padding={x} color={y} … />`, funciona muito bem e adere totalmente ao “jeito React” de desenvolver (edited)
+
+hnordt [11 hours ago]
+na minha exp vc tem q fazer jangling pra compor componentes com styled-components
+
+hnordt [11 hours ago]
+uma vez q vc aprende a compor bem os componentes, jsxstyle comeca fazer muito sentido
+
+sibelius [10 hours ago]
+O styled componentes resolve o naming
+
+sibelius [10 hours ago]
+Poucas pessoas entendem isso
+
+sibelius [10 hours ago]
+Resolve componente simples + style
+
+hnordt [10 hours ago]
+eu gosto do jsxtyle justamente por nao precisar nomear components intermediarios
+
+hnordt [10 hours ago]
+e jsxstyle resolve tudo que o styled resolve, mas de forma mais elegante :stuck_out_tongue:
+
+hnordt [10 hours ago]
+mas eh uma questao de gosto, os dois sao otimas opcoes
+
+---
+
+Bruno Gama [2:39 PM]
+que conselhos você dá pra quem quer começar a contribuir com open source?
+
+gabriel.ml [18 hours ago]
+olhar o padrão de commits do repositório antes lol
+
+gabriel.ml [18 hours ago]
+e perguntar na issue antes de mandar a PR alsjdfa
+poupa trabalhar e depois ter a PR recusada
+
+gabriel.ml [18 hours ago]
+aprender a trabalhar com PRs :point_up:
+
+nicholasess [18 hours ago]
+contribuir com open source não resume a alterar código do projeto.
+pode ser ajudando nas issues, checkando os PRs, alterando arquivos README e etc
+
+---
+
+patrick [2:40 PM]
+Além do figma, pra organizar ideias/prototipos você utiliza algum app de mindset? Ou anotações etc?
+
+gabriel.ml [18 hours ago]
+papel ftw
+
+gabriel.ml [18 hours ago]
+depois de rabiscar no papel passar pro figma (edited)
+
+gabriel.ml [18 hours ago]
+evita fazer bikeshedding
+
+gabriel.ml [18 hours ago]
+ficar discutindo como discustir o projeto sem nunca discutir o projeto é sim é pior
+
+hnordt [18 hours ago]
+gosto de usar o mindnode tb
+
+gabriel.ml [18 hours ago]
+mapas mentais tb são legais, mas eu acabo não curtindo muito, mas acho bem válido
+
+---
+
+Jabur [2:40 PM]
+Quais projetos open source em :reason: você recomenda pra quem ta começando?
+
+gabriel.ml [18 hours ago]
+olhar o código do bs-react-native
+
+gabriel.ml [18 hours ago]
+e do github/Astrocoders/reform (edited)
+
+gabriel.ml [18 hours ago]
+esses tem basicamente a essência do que vc vai usar em Reason
+
+---
+
+Jabur [2:40 PM]
+Quais seus maiores desafios em liderar um time?
+
+gabriel.ml [18 hours ago]
+estimativas e saber o estado mental do time e falar quando eles devem descansar
+
+gabriel.ml [18 hours ago]
+as vezes tem alguém arrastando o time simplesmente pq tá se cobrando demais e não descansou direito
+
+---
+
+Jabur [2:41 PM]
+Os desenvolvedores que entram na :astrocoders: curtem trabalhar com :reason:  já de início? Ou rola alguma oposição?
+
+gabriel.ml [18 hours ago]
+curtem depois do primeiro tour
+
+gabriel.ml [18 hours ago]
+eu mostro como a gente consegue refator dezenas de arquivo e o projeto rodar de primeiro depois :dancer:
+
+gabriel.ml [18 hours ago]
+já convence bem isso ahuasa
+
+---
+
+Bruno Gama [2:42 PM]
+ramda vs lodash/fp
+
+gabriel.ml [18 hours ago]
+comecei com lodash/fp
+
+gabriel.ml [18 hours ago]
+mas ramda é melhor pq segue mais a linha correta de funcional
+
+---
+
+rocali [2:43 PM]
+Como vc vê o mercado mobile hoje, em relação a RN x nativo?
+
+gabriel.ml [18 hours ago]
+acho que cada um se completa, mas RN vai dominar cada vez mais
+
+gabriel.ml [18 hours ago]
+principalmente com Reason
+
+gabriel.ml [18 hours ago]
+o próximo passo da galera do Reason é compilação nativa de OCaml, aí meua migo, vai ser outra história
+
+Jabur [18 hours ago]
+aí vai ser radical!!!!
+
+---
+
+Jabur [2:43 PM]
+Existem vagas de trabalho no brasil e mundo que exigem :reason: ?
+
+gabriel.ml [18 hours ago]
+sim \o/ a própria reason conf que tá rolando agora pegou vários sponsors de calibre grosso
+
+gabriel.ml [18 hours ago]
+que tão embarcando nessa
+
+---
+
+Jabur [2:46 PM]
+Quais foram seus maiores desafios em escrever ReactNative com :reason: ?
+
+Existiu algum momento em que você pensou: “Não dá pra fazer com reason, vamos usar js.“?
+
+gabriel.ml [18 hours ago]
+maior desafio no começo é pq muita coisa não existe e reutliazar o que a gente já tinha
+
+gabriel.ml [18 hours ago]
+sim, eu ainda pensei em recuar na metade do caminho :joy: (edited)
+
+gabriel.ml [18 hours ago]
+mas minha experiência com coisas novas sempre me diz que do nada dá aquele clique mental e vc consegue
+
+---
+
+sibelius [2:47 PM]
+qual seria sua talk para a #react-conf :flag-br:?
+
+gabriel.ml [18 hours ago]
+Type safe communication between graphql server and ReasonReact applications, ou um título mais curto
+
+mas mostrar como é absolutamente melhor e são trabalhar com ReasonReact e GraphQL juntos, power couples
+
+---
+
+Jabur [2:48 PM]
+Fiquei bastante curioso, porque haveria tanta diferença na compilação nativa de OCaml?
+
+gabriel.ml [18 hours ago]
+Ocaml é muito performático, comparável a C praticamente
+
+gabriel.ml [18 hours ago]
+vc consegue isolar muito bem o que vc vai embarcar no seu código e cortar peso
+
+nicholasess [18 hours ago]
+então voce recomendaria Ocaml para quem quer emagrecer?
+
+gabriel.ml [13 hours ago]
+sim :joy: (edited)
+
+---
+
+Bruno Gama [2:49 PM]
+qual é a metodologia razoável de se utilizar recompose num projeto?
+
+Jabur [18 hours ago]
+ganhou brinde
+
+Bruno Gama [18 hours ago]
+haeuhaeuheauhae
+
+gabriel.ml [17 hours ago]
+alsdfjaashua não botar 10 recompose num só lance
+
+gabriel.ml [17 hours ago]
+deixei essa passar sem querer
+
+---
+
+guilhermedecampo [2:49 PM]
+Quais conceitos funcionais ainda não te deixam dormir?
+
+gabriel.ml [18 hours ago]
+hindley-milner lol
+
+gabriel.ml [18 hours ago]
+toda a família de teoria da categoria tb ahsusa muito chão, mas muita coisa foda pra aprender
+
+---
+
+guilhermedecampo [2:50 PM]
+Qual melhor forma de lidar com async in :reason: ? Apesar de promises funcionar ok a comunidade está pensando em alguma coisa diferente?
+
+gabriel.ml [18 hours ago]
+melhor forma de trabalhar com async é de forma monádica
+
+gabriel.ml [18 hours ago]
+já tem implementações em OCaml e a galera do Reason já implementou o suporte da sintaxe
+
+gabriel.ml [18 hours ago]
+acho que em breve eles embarcam com Reason algo
+
+gabriel.ml [18 hours ago]
+o problema maior atualmente de ainda não ter uma forma monádica de trabalhar com async em Reason é pq a spec das js promises não é muito bom, principalmete pra type system
+
+gabriel.ml [18 hours ago]
+Promise.resolve(Promise.resolve(1)) equivalte a `Promies.resolve(1)` em js, o que não é muito sound em type system
+
+gabriel.ml [18 hours ago]
+e bem bug prone
+
+gabriel.ml [18 hours ago]
+acho que eles vão abstrair uma nova api de promises pra Reason trabalhar com JS em breve
+
+gabriel.ml [18 hours ago]
+e aí vai ser :top: (edited)
+
+guilhermedecampo [18 hours ago]
+top!
+
+---
+
+Jabur [2:51 PM]
+Como você se sentiu quando teve o reconhecimento de botarem a logo da :astrocoders: no site do :reason: (https://reasonml.github.io/) ao lado de empresas gigantes como Facebook.
+
+Jabur [18 hours ago]
+@guilhermedecampo se quiser responder essa também.
+
+guilhermedecampo [18 hours ago]
+foi animal aceitarem nossa PR! Quem quiser (e estiver usando claro) é só mandar uma PR no repo.
+
+---
+
+Bruno Gama [2:51 PM]
+Ja brincou com Elm? Se sim, tem algum comentario principalmente em comparação com o Reason?
+
+gabriel.ml [18 hours ago]
+já, há muito tempo atrás
+
+gabriel.ml [18 hours ago]
+acho Reason mais próximo dos corações de programadores JS (edited)
+
+gabriel.ml [18 hours ago]
+haha
+
+gabriel.ml [18 hours ago]
+fazer interop entre JS e Reason é mais simples do que em Elm, com o custo de que não pode ser tão seguro às vezes
+
+---
+
+guilhermedecampo [2:52 PM]
+Se eu te encontrar pessoalmente e quiser conversar sobre a lib ocaml Lwt qual som eu tenho que emitir pra você entender do que estou falando?
+
+gabriel.ml [18 hours ago]
+LOTERIA
+
+gabriel.ml [18 hours ago]
+lasjdfljasdjf
+
+guilhermedecampo [18 hours ago]
+https://github.com/ocsigen/lwt
+>GitHub<br/>ocsigen/lwt<br/>lwt - OCaml promises and concurrent I/O.
+
+---
+
+tiagosouto [2:54 PM]
+você tem mentores (tanto na parte de desenvolvimento quanto empreendedor)? se sim, quem sao?
+
+gabriel.ml [18 hours ago]
+quando o lance é negócios eu praticamente sou de humanas, meu mentor nessa área é o @guilhermedecampo
+
+meu mentor original de código foi o @charlenopires (aparece aí mestre!) quando eu fiz meu técnico (edited)
+
+---
+
+Jabur [2:56 PM]
+Qual foi o melhor livro que você já leu?
+
+xereda [18 hours ago]
+Boa!
+
+gabriel.ml [18 hours ago]
+O Guia do Mochileiro das Gálaxias, a trilogia de 5
+
+acho que realmente botou minha mente pra ficar imaginando as coisas que a realidade pode abrigar
+
+---
+
+joao [2:58 PM]
+quais características você leva em consideração quando tem que escolher uma lib? e uma linguagem?
+
+gabriel.ml [18 hours ago]
+pra mim as máquinas que façam o trabalho duro
+
+gabriel.ml [18 hours ago]
+quanto mais a ferramenta faz o trabalho pra vc melhor
+
+---
+
+hnordt [2:58 PM]
+Quais as principais vantagens e trade-offs ao optar por Reason ao inves de JS? (edited)
+
+gabriel.ml [18 hours ago]
+refatorar sem medo
+
+gabriel.ml [18 hours ago]
+acho que pra mim esse foi o maior ponto antes de tudo
+
+---
+
+patrick [2:59 PM]
+Você da mentoria pra alguem?
+>tiagosouto<br/>você tem mentores (tanto na parte de desenvolvimento quanto empreendedor)? se sim, quem sao?<br/>Posted in #generalYesterday at 2:54 PM
+
+gabriel.ml [17 hours ago]
+putz não tinha visto essa, mas acho que vale a pena responder agora
+
+eu sou tech lead aqui na :astrocoders: então eu meio que mentoro o time haha
+
+gabriel.ml [17 hours ago]
+eu dou o onboarding de reason
+
+patrick [17 hours ago]
+:star-struck:
+
+---
+
+sibelius [2:59 PM]
+como realizar testes?
+
+gabriel.ml [18 hours ago]
+you don't
+
+gabriel.ml [18 hours ago]
+asljasdf
+
+gabriel.ml [18 hours ago]
+mas quando precisar fazer, sempre que seja pra proteger alguma business logic em partes pequenas
+
+---
+
+Jabur [3:00 PM]
+ITS ALL OVER!! Muito obrigado a todo mundo que participou, espero que todo mundo tenha se divertido e tirado suas dúvidas.
+@gabriel.ml Muito obrigado por aceitar o convite e ter tirado 1h do seu dia. Como ultima pergunta poderia indicar 5 pessoas que você gostaria de ver no próximo QA?
+Até mês que vem people!!! :smile:
+
+Jabur [18 hours ago]
+penúltima hehe
+
+gabriel.ml [18 hours ago]
+@haskellcamargo
+@marina
+@hnordt
+
+Quildreen Motta, manja muitooooo de tudo, mas acho difícil a disponibilidade
+
+Cheng Lou
+@jaredly
+
+Jabur [18 hours ago]
+`Cheng Lou` :smile: gostei desse nome..
+
+---
+
+joao [3:00 PM]
+quais projetos escritos em reason você recomenda acompanhar?
+
+gabriel.ml [18 hours ago]
+bs-react-native
+reform
+nact
+redex.github.io
+reroute-native (da callstack, que ainda vão abrir em breve)
+
+guilhermedecampo [18 hours ago]
+reform :heart: :astrocoders:
+
+---
+
+hnordt [3:00 PM]
+Qual filosofia ou conceito vc aplica pra testar realmente o que importa / testar de forma eficiente?
+
+gabriel.ml [18 hours ago]
+acho que o que importa é o que entra e sai da função
+não gosto de testar muito side effects pq acaba precisando de mock ou DI, o que obscurece a finalidade do  código de testes
+
+---
+
+tgmarinho [3:02 PM]
+o que vc acha de mais legal no Meteor?
+
+guilhermedecampo [18 hours ago]
+reactivity out-of-the-box & account system & mongo pra mim. Se quiser fazer um protótipo rapidão é o caminho. Monolito FTW
+
+gabriel.ml [18 hours ago]
+flexibilidade e prototipação
+mas 15 minuto pra bootar SAD =(
+
+guilhermedecampo [18 hours ago]
+o custo de ter all-in-one =(
+
+tgmarinho [18 hours ago]
+legal, estou curtindo muito tbm tudo isso, no começo achei muito mágico, e eu queria aprender node pra aprender depois meteor... então comecei a fazer as coisas com node e configurar webpack, ai curti ainda mais o Meteor, só deixar ele fazer o trampo dele e o "nosso"!
+
+---
+
+tgmarinho [3:02 PM]
+tem prorrogação não =( rsrs
+
+tgmarinho [18 hours ago]
+massa to estudando e trabalhando com as stacks que essa turma da Astrocoders trabalha https://github.com/CodeFTW/Stack
+>GitHub<br/>CodeFTW/Stack<br/>Stack - Tecnology we are learning and using in Code FTW
+
+Jabur [18 hours ago]
+hehe, podia ter ne.
+
+tgmarinho [18 hours ago]
+pois é, tava lendo as respostas ainda, na hora de bolar uma acabou hahahah =P foi massa !
+
+---
+
+hnordt [3:03 PM]
+esses Q&As sao tao eficientes (ou mais) quanto pair programming pra aprender novas ideias, parabens :entria:
+
