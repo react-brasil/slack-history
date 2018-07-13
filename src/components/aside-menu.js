@@ -7,6 +7,10 @@ import { Aside } from 'variables/styles';
 
 const ASIDE_MENU_ITEMS = {
   sessions: [{
+    path: "/qa/sophie.alpert-201807",
+    title: "sophie.alpert-201807",
+    description: ""
+  },{
     path: "/qa/gabriel.ml-201805",
     title: "gabriel.ml-201805",
     description: ""
@@ -28,6 +32,9 @@ const ASIDE_MENU_ITEMS = {
   }, {
     path: "/author/sibelius",
     title: "sibelius"
+  }, {
+    path: "/author/sophie.alpert",
+    title: "sophie.alpert"
   }],
   channels: [{
     path: "/channel/general",

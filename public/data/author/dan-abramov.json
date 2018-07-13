@@ -22,7 +22,7 @@
       }
     },
     "authors": [
-      "Contats",
+      "Contacts",
       "Dan Abramov",
       "Github",
       "Twitter"
@@ -30,7 +30,7 @@
   },
   "messages": [
     {
-      "id": "a30e7a65-e600-46fd-b0c2-d7a5059f2894",
+      "id": "52143327-0db2-45d4-86a2-da76e8e7b0e3",
       "img": null,
       "username": "Dan Abramov",
       "time": "0:00 PM",
@@ -39,7 +39,7 @@
       "highlights": "react redux"
     },
     {
-      "id": "d3eceb34-3691-4a63-9834-06c1e5356d07",
+      "id": "ca2d9a7a-c180-4689-bf52-28c31fe33bba",
       "img": null,
       "username": "Github",
       "time": "0:00 PM",
@@ -48,7 +48,7 @@
       "highlights": "github"
     },
     {
-      "id": "1384ae07-afd6-4158-9c21-26747e87006f",
+      "id": "ca9a8075-a28f-4f7b-a60f-4adc402b2661",
       "img": null,
       "username": "Twitter",
       "time": "0:00 PM",
@@ -57,9 +57,9 @@
       "highlights": ""
     },
     {
-      "id": "a62d9153-4042-416c-b990-a60f6f020d8d",
+      "id": "0523e8c3-8c17-442c-a18a-69069d41bf5d",
       "img": null,
-      "username": "Contats",
+      "username": "Contacts",
       "time": "0:00 PM",
       "msg": "<p>E-mail: <a href=\"mailto:dan.abramov@me.com\">dan.abramov@me.com</a></p>\n",
       "messages": [],
