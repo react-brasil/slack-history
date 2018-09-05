@@ -7,10 +7,14 @@ import { Aside } from 'variables/styles';
 
 const ASIDE_MENU_ITEMS = {
   sessions: [{
+    path: "/qa/bvaughn-201808",
+    title: "bvaughn-201808",
+    description: ""
+  }, {
     path: "/qa/sophie.alpert-201807",
     title: "sophie.alpert-201807",
     description: ""
-  },{
+  }, {
     path: "/qa/gabriel.ml-201805",
     title: "gabriel.ml-201805",
     description: ""
@@ -23,10 +27,13 @@ const ASIDE_MENU_ITEMS = {
     title: "sibelius-201803",
     description: ""
   }],
-  authors: [{
+  authors: [ {
+    path: "/author/bvaughn",
+    title: "bvaughn"
+  }, {
     path: "/author/dan-abramov",
     title: "dan-abramov"
-  }, {
+  },{
     path: "/author/gabriel.ml",
     title: "gabriel.ml"
   }, {
@@ -123,7 +130,7 @@ export default styled(AsideMenu)`
       padding: 5px 0;
 
       &:before {
-        content: "⚫";
+        content: "●";
         margin-right: 5px;
         color: #4C9689;
       }
@@ -170,7 +177,7 @@ export default styled(AsideMenu)`
     }
 
     &.authors dt:before {
-      content: '⚫';
+      content: '●';
     }
   }
 `;
