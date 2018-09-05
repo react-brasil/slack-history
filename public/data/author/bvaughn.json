@@ -1,0 +1,70 @@
+{
+  "info": {
+    "details": "",
+    "highlights": {
+      "github": {
+        "count": 4,
+        "synonymous": [
+          "github"
+        ]
+      },
+      "javascript": {
+        "count": 1,
+        "synonymous": [
+          "javascript",
+          "js"
+        ]
+      },
+      "react": {
+        "count": 1,
+        "synonymous": [
+          "react"
+        ]
+      }
+    },
+    "authors": [
+      "Contacts",
+      "Github",
+      "Twitter",
+      "bvaughn"
+    ]
+  },
+  "messages": [
+    {
+      "id": "c47358df-acf5-4c33-bb78-d45c0498db80",
+      "img": null,
+      "username": "bvaughn",
+      "time": "0:00 PM",
+      "msg": "<p>React JS core team at <a class=\"user-mention\" href=\"https://github.com/facebook\">@facebook</a>; formerly at <a class=\"user-mention\" href=\"https://github.com/treasure-data\">@treasure-data</a> and <a class=\"user-mention\" href=\"https://github.com/google\">@google</a>.</p>\n",
+      "messages": [],
+      "highlights": "github javascript js react"
+    },
+    {
+      "id": "5ab3ec68-0a98-4e3d-80ef-ff4e94f5dce6",
+      "img": null,
+      "username": "Github",
+      "time": "0:00 PM",
+      "msg": "<p><a href=\"https://github.com/bvaughn\">https://github.com/bvaughn</a></p>\n",
+      "messages": [],
+      "highlights": "github"
+    },
+    {
+      "id": "520f22f1-c2ec-4180-991f-976f0621543b",
+      "img": null,
+      "username": "Twitter",
+      "time": "0:00 PM",
+      "msg": "<p><a href=\"https://twitter.com/brian_d_vaughn/\">https://twitter.com/brian_d_vaughn/</a></p>\n",
+      "messages": [],
+      "highlights": ""
+    },
+    {
+      "id": "e78b23ed-cc32-4c02-ad70-7eaf052533ec",
+      "img": null,
+      "username": "Contacts",
+      "time": "0:00 PM",
+      "msg": "<p>Website: <a href=\"http://www.briandavidvaughn.com\">http://www.briandavidvaughn.com</a><br />E-mail: <a href=\"mailto:brian.david.vaughn@gmail.com\">brian.david.vaughn@gmail.com</a></p>\n",
+      "messages": [],
+      "highlights": ""
+    }
+  ]
+}

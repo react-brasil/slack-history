@@ -1,0 +1,222 @@
+matheus_gsilva [3:00 PM]
+And we are starting our Q&A with @bvaughn (Brian Vaughn).
+
+---
+
+matheus_gsilva [3:00 PM]
+First of all, in the name of the brazilian community, we want to thank you for have come!
+
+---
+
+matheus_gsilva [3:00 PM]
+@haz<br />How was the process for you to start working at Facebook?
+
+bvaughn [3:02 PM]
+Hi everyone :slightly_smiling_face: I am happy to be here.
+
+bvaughn [3:02 PM]
+Is this question asking about the interviewing process? Or after you've been hired?
+
+bvaughn [3:02 PM]
+I can answer both if it's unclear.
+
+Jabur [3:03 PM]
+You can answer both :smile: thanks
+
+bvaughn [3:09 PM]
+>@haz – How was the process for you to start working at Facebook?
+
+I joined Facebook about 2 years ago. I assume the process is still about the same as when I went through it.
+
+Before interviewing, I spoke with a few people from Facebook. I think I chatted on the phone with @Vjeux and I grabbed lunch with @sophiebits. This gave me a chance to get to know some FB engineers and get an idea of what they were working on. I also spoke with an FB recruiter who was super helpful in preparing me for the interview process (what types of questions would be asked, what reading material to brush up on before the interview started, etc).
+
+The interview itself consisted of a couple of different sessions on campus. Each session had an interviewer who asked questions which I answered verbally or on a white board. The whole process took a couple of hours and was pretty relaxed. (Although I was nervous.)
+
+Once I joined, I spent the first few weeks going through a boot camp– a series of classes that introduced me to all of the internal Facebook tools. There were lots of practice exercises to learn how to use things, and I had a mentor (@Daniel15) who was very helpful too. A few weeks in, there's an internal "job fair" of sorts where you meet all of the teams who are hiring, and you get to work a few days on different teams– doing real tasks– to see how you like the projects and if you're a good fit. I spoke with at least six teams I think, mostly product teams, although I ended up joining the React team obviously :smile:
+
+---
+
+matheus_gsilva [3:09 PM]
+@sibelius<br />How did you started react virtualized project?
+
+bvaughn [3:14 PM]
+Before Facebook, I worked at Treasure Data on their frontend "console" app that's used to manage databases and tables, write queries, etc– basically it's a tool for managing big data– much too big to download or show all of it in the browser. When I joined, we were just starting a big rewrite of the console app– going from Agular to React. So we started off using Facebook's fixed-data-table as a way of limiting the amount of data we downloaded and displayed.<br />But fixed-data-table had a few limitations:<br />1. It didn't provide a way to programatically scroll to a specific row, which was important for us when e.g. there was a problem with a particular column within a table containing thousands of columns.<br />2. It didn't "virualize" horizontally, only vertically. So it limited the number of _rows_ we showed for a query's results, but each row may still have hundreds (or more) of columns.<br />So I decided to try writing my own over one weekend, and that was what I released as version 1 of react-virtualized. It was basically just the `Table` component at first, and was pretty much a drop-in replacement for fixed-data-table but with an added API for scrolling to a specific row programatically.
+
+---
+
+matheus_gsilva [3:14 PM]
+@sibelius<br />How async react will improve virtualized lists?
+
+bvaughn [3:17 PM]
+This is a great question :slightly_smiling_face: The short answer is– we don't know yet!<br />But some things it might allow us to do is pre-render rows with a low priority (e.g. hidden or off-screen) when we have idle time. Libraries like react-window / react-virtualized currently pre-render a bit (they call it "over scanning") to reduce flicker and better support keyboard nav, but they do this _synchronously_, so it can impact performance– and you don't want to pre-render too much. Async might let us do this in a much more performant way.<br />We have also talked a bit in the past about building some form of virtualization support into React so that e.g. stateful components could maintain/restore state between unmounting and re-mounting. (Currently you have to "lift up" any persisted state to avoid losing it when a row is unmounted.) We've only talked about this though, no development work has been started yet.
+
+---
+
+matheus_gsilva [3:18 PM]
+@Guilherme Varandas<br />In your perspective, how different is to develop products that target developers than other kind of customers (like common web applications)?<br />Are they more demanding? Is the usual feedback more "crude" and "harsh" (developers can be wild animals sometimes). (edited)
+
+bvaughn [3:21 PM]
+I don't know if developers are any more demanding than other kinds of users :sweat_smile: Some people are, some aren't.<br />In general though, I enjoy writing products for developers more than for other types of users– because you have a bigger impact. If I build an application like Facebook, people can do a lot of amazing things with it– and that's really exciting. But if I build something like React, people can build things like Facebook or Netflix or Amazon etc. so the impact is bigger.<br />I also find it's really rewarding to build things for my peers. Especially in open source, it's like we're all one big team building things for each other and helping each other. It's a good feeling. Almost everyone is super friendly and helpful. I've made a lot of friends through open source projects like React. :blush:
+
+---
+
+matheus_gsilva [3:22 PM]
+@gabriel.metalanguage<br />What are you feelings towards the context API? Do you think that it is going to stay around for longer or some other best approach is coming?
+
+bvaughn [3:25 PM]
+Which version of the context API are you referring to? :clown_face:<br />I don't like the legacy API much. It doesn't handle some cases well (with `shouldComponentUpdate`). Old/new props aren't passed to all of the will-*/did-* lifecycles. It's built around `PropTypes` which I'm not a big fan of.<br />I like the new render-prop context API introduced in version 16.3 much more. The only real downside is that it requires a wrapper element to consume the context value, which can add a lot of bloat DevTools if you're using context heavily. We're working on a lighter-weight form of this though! And we're also working to add some filtering to DevTools so that you can hide things like wrapper context consumers.
+
+---
+
+matheus_gsilva [3:26 PM]
+The new version<br />Speaking of devtools.<br />@sibelius<br />What is still missing on React DevTools? Will react suspense change it? (edited)
+
+bvaughn [3:29 PM]
+Lots of things! There are many open GitHub issues (even just for the newly added profiler plugin) :sweat_smile:
+
+We'll need to add some features to the DevTools to make it easier to debug apps that use async and suspense. Some of this can already be seen in the new profiler plugin I've been working on. (I've posted a few videos on YouTube, and lots of little GIFs on Twitter, if you're curious.)
+
+You can get an idea of some other stuff that we might be adding soon (like new "Elements" or "Sources" panels) by browsing GitHub issues :slightly_smiling_face:
+
+(This response is a little vague, so if there are follow up questions about this ^ feel free to hit me up on Twitter)
+
+matheus_gsilva [3:31 PM]
+Well, since the job you are doing on profiler will help us debug stuff,
+
+---
+
+matheus_gsilva [3:31 PM]
+@haz<br />In your opinion, what's the best approach to measure perfomance of React libraries? (edited)
+
+bvaughn [3:37 PM]
+I guess there are a lot of tools for measuring performance (e.g. react-addons-perf and `printWasted`, why-did-you-update). A lot of them won't work well with async rendering though. This is the main reason I started working on the profiler API.
+
+With async React– and other upcoming changes– I think the best ways to measure perf will be a combination of:
+
+. The Profiler API (currently `React.unstable_Profiler` – https://github.com/reactjs/rfcs/pull/51) for recording perf metrics of a deployed app.
+
+. The DevTools profiler plug-in for iterating on and/or debugging performance manually
+
+. The built-in browser profiling tools for measuring function call durations
+
+Each of the above offers different strengths. The Profiler API should enable developers to collect metrics from "real users". The built-in browser profiling tools (which includes our User Timning API events) provide some useful insight into which parts of your app may be "slow" when you are manually profiling. And the DevTools profiler will enable you to identify performance bottlenecks and tune your application in a way that works well with suspense and async.
+
+> GitHub<br />Profiler RFC by bvaughn · Pull Request #51 · reactjs/rfcs<br />View formatted RFC Feedback is welcome! Would you use these timings? If not (or if so) is there something else we could add to make it more useful to you? Do you have ideas for abstractions (or v...
+
+---
+
+matheus_gsilva [3:38 PM]
+We had few similar questions about this topic.
+
+Which book(s) do you think every developer should read?
+
+bvaughn [3:42 PM]
+Hm... :thinking_face: I'll be honest. I'm not the best one to answer this question. I mostly only read fiction.
+
+I think I've really only read one programming book, "PHP and MySQL Web Development", and that was a long time ago. :sweat_smile: I tried to read the Gang of Four "Design Patterns" book but it was kind of dense and I didn't finish.
+
+I mostly learn by trying things, failing, and trying again. I read Stack Overflow. I find YouTube explanation videos very helpful. I don't think this is necessarily the most efficient way to learn, it's just what works reasonably well for me.
+
+---
+
+matheus_gsilva [3:43 PM]
+@adelgado<br />We know that besides your work on Facebook and React, you also do some (really awesome) work on music composition and producing. How it is for you to handle both of these passions? Do you think they interfere with each other? Does music knowledge help you to be a better programmer and vice-versa?
+
+bvaughn [3:46 PM]
+Oh! Well thank you! :flushed:
+
+I think music and software (and design, and art, etc) are all different creative outlets. They all feed on a similar energy. Writing a song, for instance, can be hard word in a similar way as writing a new API.
+
+I haven't done much with music lately because I live in a small apartment at the moment, but also because I stay pretty busy with software and this often leaves me too tired to sit down and write a song.
+
+So yeah, they can interfere with each other I guess– since each of us only has so much time and energy, and we have to choose how to spend it.
+
+I don't know if musical knowledge allows you to be a better programmer. I don't know if I really have any "musical knowledge" for that matter. :joy: I make music in a similar way was I program– try a bunch of things out until one sounds good.
+
+---
+
+matheus_gsilva [3:47 PM]
+@sibelius<br />Which strategies of defer render React will provide? defer render on client, defer render on server
+
+bvaughn [3:51 PM]
+We're still exploring this part of the API. I'm not sure if we know yet (although Andrew may have a good idea).
+
+On the client, we have talked about two (to my knowledge, maybe more) low-pri/deferred APIs. One for setting state with a low priority (currently `unstable_deferredUpdates`) and another for rendering hidden elements with a low priority ( "hidden" attribute, e.g. `<div hidden>`). I believe our current thinking is that state updates will be high priority by default (aka low-pri will be opt-in)
+
+I don't know if there's been any talk about deferred rendering on the server, or what that would mean. (I have very little experience with server rendering.) (edited)
+
+---
+
+matheus_gsilva [3:52 PM]
+@matheus_gsilva<br />How the idea to create react suspense started and why?
+
+bvaughn [3:54 PM]
+Hm! Good question. I'm actually not...sure...when this first came up.
+
+I think it may have come about when Andrew, Flarnie, and I were working on updating react-relay to be async compatible. We realized there were a lot of obstacles and potential pitfalls and that async dependencies were going to be tricky to manage right. (See https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html for an example.)
+
+Then I think Andrew and Sebastian went off and brainstormed a bunch– staying really late at work one evening, if I recall– and the idea for throwing a Promise to indicate an async dependency came up. I vaguely remember them sharing that idea with us after a late night session. The rest was just iterating on that initial idea :slightly_smiling_face: (edited)
+
+reactjs.org
+
+Update on Async Rendering – React Blog
+
+For over a year, the React team has been working to implement asynchronous rendering. Last month during his talk at JSConf Iceland, Dan unveiled some of the exciting new possibilities async rendering unlocks . Now we’d like to share with you some of the lessons we’ve learned while working on these features, and some recipes to help prepare your components for async rendering when it launches. One of the biggest lessons we’ve learned is that some of our legacy component lifecycles tend to…
+
+https://reactjs.org/logo-og.png
+
+---
+
+matheus_gsilva [3:55 PM]
+@gabriel.metalanguage<br />Do you think native ReasonML is the future for the React Native project? What are your thoughts on it?
+
+bvaughn [3:55 PM]
+I don't know :blush: I've actually never used ReasonML. Some teams at FB are using it, but I don't know if any of us yet knows what it will become.
+
+(Sorry! This is a crappy answer :zany_face:) (edited)
+
+---
+
+matheus_gsilva [3:56 PM]
+No problem :stuck_out_tongue:
+
+And our last question
+
+@sibelius
+
+what about instead of throwing a promise, we could use async await functions, generator and async iterators for components? much like this package https://github.com/alexeyraspopov/react-coroutine?
+
+> GitHub<br />alexeyraspopov/react-coroutine<br />Make your async components compact and descriptive by leveraging the power of the language features - alexeyraspopov/react-coroutine
+
+bvaughn [4:01 PM]
+Andrew or Sebastian would better answer this– but...
+
+I think the original inspiration came from algebraic effects:
+
+https://twitter.com/sebmarkbage/status/941214259505119232
+
+Throwing a Promise was nice because there was a nice parallel in the way we handle other thrown values (errors). We could reuse alot of the same logic for matching thrown Promises with `Placeholders` that we use to match thrown errors with error boundaries.
+
+We were also able to add this without changing any of our existing APIs.
+
+Another nice advantage is that you can throw from deeply within the stack without having to change methods along the way. (For example, if we used a generator or an async function, each level of indirection would also have to use a generator or async function in order to work.) Throwing "just works" because of how JavaScript works. :slightly_smiling_face: (edited)
+
+Sebastian Markbåge@sebmarkbage
+
+Poor man's algebraic effects. https://gist.github.com/sebmarkbage/2c7acb6210266045050632ea611aebee
+
+TwitterDec 14th, 2017
+
+---
+
+matheus_gsilva [4:01 PM]
+Well, in the name of the brazilian react community, i thank you for being here today! Thank you so much for your time and attention!
+And now, we end our Q&A with Brian Vaughn!
+
+bvaughn [4:02 PM]
+Thank you!
+
+---
+
+matheus_gsilva [4:03 PM]
+Valeu pessoal, pela participação

@@ -69,7 +69,7 @@ const Aside = styled.aside`
 
       a {
         &:before {
-          content: "⚫";
+          content: "●";
           color: #717274;
           margin: 0 10px 0 5px;
         }

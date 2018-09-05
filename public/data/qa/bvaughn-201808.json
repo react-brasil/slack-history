@@ -1,0 +1,435 @@
+{
+  "info": {
+    "details": "",
+    "highlights": {
+      "react": {
+        "count": 27,
+        "synonymous": [
+          "react"
+        ]
+      },
+      "async": {
+        "count": 18,
+        "synonymous": [
+          "async"
+        ]
+      },
+      "github": {
+        "count": 7,
+        "synonymous": [
+          "github"
+        ]
+      },
+      "component": {
+        "count": 6,
+        "synonymous": [
+          "component",
+          "components",
+          "componente",
+          "componentes"
+        ]
+      },
+      "book": {
+        "count": 3,
+        "synonymous": [
+          "book",
+          "books",
+          "livro",
+          "livros"
+        ]
+      },
+      "web": {
+        "count": 2,
+        "synonymous": [
+          "web"
+        ]
+      },
+      "open source": {
+        "count": 2,
+        "synonymous": [
+          "open source"
+        ]
+      },
+      "form": {
+        "count": 2,
+        "synonymous": [
+          "form"
+        ]
+      },
+      "native": {
+        "count": 2,
+        "synonymous": [
+          "native"
+        ]
+      },
+      "reasonml": {
+        "count": 2,
+        "synonymous": [
+          "reasonml"
+        ]
+      },
+      "frontend": {
+        "count": 1,
+        "synonymous": [
+          "frontend"
+        ]
+      },
+      "relay": {
+        "count": 1,
+        "synonymous": [
+          "relay"
+        ]
+      },
+      "package": {
+        "count": 1,
+        "synonymous": [
+          "package",
+          "packages",
+          "pacote",
+          "pacotes"
+        ]
+      },
+      "javascript": {
+        "count": 1,
+        "synonymous": [
+          "javascript",
+          "js"
+        ]
+      }
+    },
+    "authors": [
+      "Jabur",
+      "bvaughn",
+      "matheus_gsilva"
+    ]
+  },
+  "messages": [
+    {
+      "id": "f960f83c-61d2-4e99-a973-e924c961f55c",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:00 PM",
+      "msg": "<p>And we are starting our Q&amp;A with @bvaughn (Brian Vaughn).</p>\n",
+      "messages": [],
+      "highlights": ""
+    },
+    {
+      "id": "46de006f-cdaa-41bf-b6c7-df3d18bfd87b",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:00 PM",
+      "msg": "<p>First of all, in the name of the brazilian community, we want to thank you for have come!</p>\n",
+      "messages": [],
+      "highlights": ""
+    },
+    {
+      "id": "b2b1e8ef-83c8-45c1-bb34-0d3d9d1093a7",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:00 PM",
+      "msg": "<p>@haz<br />How was the process for you to start working at Facebook?</p>\n",
+      "messages": [
+        {
+          "id": "2ab2451f-5c0d-4be8-ba7e-35e73a0a8269",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:02 PM",
+          "msg": "<p>Hi everyone 🙂 I am happy to be here.</p>\n<p>Is this question asking about the interviewing process? Or after you&#39;ve been hired?</p>\n<p>I can answer both if it&#39;s unclear.</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "ca68fbf0-601b-4365-98c3-900e22113908",
+          "img": null,
+          "username": "Jabur",
+          "time": "3:03 PM",
+          "msg": "<p>You can answer both 😄 thanks</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "df5814a8-c8ff-46a8-b2f0-222f48749e02",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:09 PM",
+          "msg": "<blockquote>\n<p>@haz – How was the process for you to start working at Facebook?</p>\n</blockquote>\n<p>I joined Facebook about 2 years ago. I assume the process is still about the same as when I went through it.</p>\n<p>Before interviewing, I spoke with a few people from Facebook. I think I chatted on the phone with @Vjeux and I grabbed lunch with @sophiebits. This gave me a chance to get to know some FB engineers and get an idea of what they were working on. I also spoke with an FB recruiter who was super helpful in preparing me for the interview process (what types of questions would be asked, what reading material to brush up on before the interview started, etc).</p>\n<p>The interview itself consisted of a couple of different sessions on campus. Each session had an interviewer who asked questions which I answered verbally or on a white board. The whole process took a couple of hours and was pretty relaxed. (Although I was nervous.)</p>\n<p>Once I joined, I spent the first few weeks going through a boot camp– a series of classes that introduced me to all of the internal Facebook tools. There were lots of practice exercises to learn how to use things, and I had a mentor (@Daniel15) who was very helpful too. A few weeks in, there&#39;s an internal &quot;job fair&quot; of sorts where you meet all of the teams who are hiring, and you get to work a few days on different teams– doing real tasks– to see how you like the projects and if you&#39;re a good fit. I spoke with at least six teams I think, mostly product teams, although I ended up joining the React team obviously 😄</p>\n",
+          "highlights": "react"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "8d5f67a7-dfcf-4e4f-852f-23995b5c3f5c",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:09 PM",
+      "msg": "<p>@sibelius<br />How did you started react virtualized project?</p>\n",
+      "messages": [
+        {
+          "id": "e014ecd2-8f1d-4345-a9ba-9c7b29cd45eb",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:14 PM",
+          "msg": "<p>Before Facebook, I worked at Treasure Data on their frontend &quot;console&quot; app that&#39;s used to manage databases and tables, write queries, etc– basically it&#39;s a tool for managing big data– much too big to download or show all of it in the browser. When I joined, we were just starting a big rewrite of the console app– going from Agular to React. So we started off using Facebook&#39;s fixed-data-table as a way of limiting the amount of data we downloaded and displayed.<br />But fixed-data-table had a few limitations:<br />1. It didn&#39;t provide a way to programatically scroll to a specific row, which was important for us when e.g. there was a problem with a particular column within a table containing thousands of columns.<br />2. It didn&#39;t &quot;virualize&quot; horizontally, only vertically. So it limited the number of <em>rows</em> we showed for a query&#39;s results, but each row may still have hundreds (or more) of columns.<br />So I decided to try writing my own over one weekend, and that was what I released as version 1 of react-virtualized. It was basically just the <code>Table</code> component at first, and was pretty much a drop-in replacement for fixed-data-table but with an added API for scrolling to a specific row programatically.</p>\n",
+          "highlights": "component components componente componentes frontend react"
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "1a50a825-99d7-45ca-86ed-98c75bf03719",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:14 PM",
+      "msg": "<p>@sibelius<br />How async react will improve virtualized lists?</p>\n",
+      "messages": [
+        {
+          "id": "0b2c8031-5d16-4692-bee6-c947f07b995c",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:17 PM",
+          "msg": "<p>This is a great question 🙂 The short answer is– we don&#39;t know yet!<br />But some things it might allow us to do is pre-render rows with a low priority (e.g. hidden or off-screen) when we have idle time. Libraries like react-window / react-virtualized currently pre-render a bit (they call it &quot;over scanning&quot;) to reduce flicker and better support keyboard nav, but they do this <em>synchronously</em>, so it can impact performance– and you don&#39;t want to pre-render too much. Async might let us do this in a much more performant way.<br />We have also talked a bit in the past about building some form of virtualization support into React so that e.g. stateful components could maintain/restore state between unmounting and re-mounting. (Currently you have to &quot;lift up&quot; any persisted state to avoid losing it when a row is unmounted.) We&#39;ve only talked about this though, no development work has been started yet.</p>\n",
+          "highlights": "async component components componente componentes form react"
+        }
+      ],
+      "highlights": "async react"
+    },
+    {
+      "id": "c087f970-e22c-4c1a-9e40-cb5e4f739021",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:18 PM",
+      "msg": "<p>@Guilherme Varandas<br />In your perspective, how different is to develop products that target developers than other kind of customers (like common web applications)?<br />Are they more demanding? Is the usual feedback more &quot;crude&quot; and &quot;harsh&quot; (developers can be wild animals sometimes). (edited)</p>\n",
+      "messages": [
+        {
+          "id": "f5d3177c-daa6-43ca-b151-4c5971d2bf23",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:21 PM",
+          "msg": "<p>I don&#39;t know if developers are any more demanding than other kinds of users 😅 Some people are, some aren&#39;t.<br />In general though, I enjoy writing products for developers more than for other types of users– because you have a bigger impact. If I build an application like Facebook, people can do a lot of amazing things with it– and that&#39;s really exciting. But if I build something like React, people can build things like Facebook or Netflix or Amazon etc. so the impact is bigger.<br />I also find it&#39;s really rewarding to build things for my peers. Especially in open source, it&#39;s like we&#39;re all one big team building things for each other and helping each other. It&#39;s a good feeling. Almost everyone is super friendly and helpful. I&#39;ve made a lot of friends through open source projects like React. 😊</p>\n",
+          "highlights": "open source react"
+        }
+      ],
+      "highlights": "web"
+    },
+    {
+      "id": "4c8fc9bb-80be-4bd5-a01a-7903a8e5260e",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:22 PM",
+      "msg": "<p>@gabriel.metalanguage<br />What are you feelings towards the context API? Do you think that it is going to stay around for longer or some other best approach is coming?</p>\n",
+      "messages": [
+        {
+          "id": "69097bb5-dcf8-43f3-89a2-d10538841326",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:25 PM",
+          "msg": "<p>Which version of the context API are you referring to? 🤡<br />I don&#39;t like the legacy API much. It doesn&#39;t handle some cases well (with <code>shouldComponentUpdate</code>). Old/new props aren&#39;t passed to all of the will-<em>/did-</em> lifecycles. It&#39;s built around <code>PropTypes</code> which I&#39;m not a big fan of.<br />I like the new render-prop context API introduced in version 16.3 much more. The only real downside is that it requires a wrapper element to consume the context value, which can add a lot of bloat DevTools if you&#39;re using context heavily. We&#39;re working on a lighter-weight form of this though! And we&#39;re also working to add some filtering to DevTools so that you can hide things like wrapper context consumers.</p>\n",
+          "highlights": "form"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "ec5fdcca-5c3f-46cd-bb14-139defcd1bbb",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:26 PM",
+      "msg": "<p>The new version<br />Speaking of devtools.<br />@sibelius<br />What is still missing on React DevTools? Will react suspense change it? (edited)</p>\n",
+      "messages": [
+        {
+          "id": "bc257f36-a9df-444b-ae3e-10a96221bd06",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:29 PM",
+          "msg": "<p>Lots of things! There are many open GitHub issues (even just for the newly added profiler plugin) 😅</p>\n<p>We&#39;ll need to add some features to the DevTools to make it easier to debug apps that use async and suspense. Some of this can already be seen in the new profiler plugin I&#39;ve been working on. (I&#39;ve posted a few videos on YouTube, and lots of little GIFs on Twitter, if you&#39;re curious.)</p>\n<p>You can get an idea of some other stuff that we might be adding soon (like new &quot;Elements&quot; or &quot;Sources&quot; panels) by browsing GitHub issues 🙂</p>\n<p>(This response is a little vague, so if there are follow up questions about this ^ feel free to hit me up on Twitter)</p>\n",
+          "highlights": "async github"
+        },
+        {
+          "id": "9c814f62-d3ee-4725-af02-69e05c171058",
+          "img": null,
+          "username": "matheus_gsilva",
+          "time": "3:31 PM",
+          "msg": "<p>Well, since the job you are doing on profiler will help us debug stuff,</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "8273afed-c8c2-4041-a87c-b96b9fd6c130",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:31 PM",
+      "msg": "<p>@haz<br />In your opinion, what&#39;s the best approach to measure perfomance of React libraries? (edited)</p>\n",
+      "messages": [
+        {
+          "id": "43758651-4463-4c53-ab81-1af66c4265b4",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:37 PM",
+          "msg": "<p>I guess there are a lot of tools for measuring performance (e.g. react-addons-perf and <code>printWasted</code>, why-did-you-update). A lot of them won&#39;t work well with async rendering though. This is the main reason I started working on the profiler API.</p>\n<p>With async React– and other upcoming changes– I think the best ways to measure perf will be a combination of:</p>\n<p>. The Profiler API (currently <code>React.unstable_Profiler</code> – <a href=\"https://github.com/reactjs/rfcs/pull/51\">https://github.com/reactjs/rfcs/pull/51</a>) for recording perf metrics of a deployed app.</p>\n<p>. The DevTools profiler plug-in for iterating on and/or debugging performance manually</p>\n<p>. The built-in browser profiling tools for measuring function call durations</p>\n<p>Each of the above offers different strengths. The Profiler API should enable developers to collect metrics from &quot;real users&quot;. The built-in browser profiling tools (which includes our User Timning API events) provide some useful insight into which parts of your app may be &quot;slow&quot; when you are manually profiling. And the DevTools profiler will enable you to identify performance bottlenecks and tune your application in a way that works well with suspense and async.</p>\n<blockquote>\n<p>GitHub<br />Profiler RFC by bvaughn · Pull Request #51 · reactjs/rfcs<br />View formatted RFC Feedback is welcome! Would you use these timings? If not (or if so) is there something else we could add to make it more useful to you? Do you have ideas for abstractions (or v...</p>\n</blockquote>\n",
+          "highlights": "async github react"
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "d8c1bc8f-5be6-4ee5-ac86-ad86ac51cb15",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:38 PM",
+      "msg": "<p>We had few similar questions about this topic.</p>\n",
+      "messages": [
+        {
+          "id": "51e5efcf-c9e6-40ee-8959-35f5e222c89f",
+          "img": null,
+          "username": "matheus_gsilva",
+          "time": "3:38 PM",
+          "msg": "<p>Which book(s) do you think every developer should read?</p>\n",
+          "highlights": "book books livro livros"
+        },
+        {
+          "id": "0aa21cb3-ff9f-4759-b8e0-d6699b8cc423",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:42 PM",
+          "msg": "<p>Hm... 🤔 I&#39;ll be honest. I&#39;m not the best one to answer this question. I mostly only read fiction.</p>\n<p>I think I&#39;ve really only read one programming book, &quot;PHP and MySQL Web Development&quot;, and that was a long time ago. 😅 I tried to read the Gang of Four &quot;Design Patterns&quot; book but it was kind of dense and I didn&#39;t finish.</p>\n<p>I mostly learn by trying things, failing, and trying again. I read Stack Overflow. I find YouTube explanation videos very helpful. I don&#39;t think this is necessarily the most efficient way to learn, it&#39;s just what works reasonably well for me.</p>\n",
+          "highlights": "book books livro livros web"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "981e2229-765f-4d09-9a9a-abc14ca3a2af",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:43 PM",
+      "msg": "<p>@adelgado<br />We know that besides your work on Facebook and React, you also do some (really awesome) work on music composition and producing. How it is for you to handle both of these passions? Do you think they interfere with each other? Does music knowledge help you to be a better programmer and vice-versa?</p>\n",
+      "messages": [
+        {
+          "id": "3e69f044-52c0-4d4b-b147-bbe69786c325",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:46 PM",
+          "msg": "<p>Oh! Well thank you! 😳</p>\n<p>I think music and software (and design, and art, etc) are all different creative outlets. They all feed on a similar energy. Writing a song, for instance, can be hard word in a similar way as writing a new API.</p>\n<p>I haven&#39;t done much with music lately because I live in a small apartment at the moment, but also because I stay pretty busy with software and this often leaves me too tired to sit down and write a song.</p>\n<p>So yeah, they can interfere with each other I guess– since each of us only has so much time and energy, and we have to choose how to spend it.</p>\n<p>I don&#39;t know if musical knowledge allows you to be a better programmer. I don&#39;t know if I really have any &quot;musical knowledge&quot; for that matter. 😂 I make music in a similar way was I program– try a bunch of things out until one sounds good.</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "0fad60af-4046-465a-97b2-f3180953f1bb",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:47 PM",
+      "msg": "<p>@sibelius<br />Which strategies of defer render React will provide? defer render on client, defer render on server</p>\n",
+      "messages": [
+        {
+          "id": "04e9597c-30c5-4fd9-af25-282848c58a4c",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:51 PM",
+          "msg": "<p>We&#39;re still exploring this part of the API. I&#39;m not sure if we know yet (although Andrew may have a good idea).</p>\n<p>On the client, we have talked about two (to my knowledge, maybe more) low-pri/deferred APIs. One for setting state with a low priority (currently <code>unstable_deferredUpdates</code>) and another for rendering hidden elements with a low priority ( &quot;hidden&quot; attribute, e.g. <code>&lt;div hidden&gt;</code>). I believe our current thinking is that state updates will be high priority by default (aka low-pri will be opt-in)</p>\n<p>I don&#39;t know if there&#39;s been any talk about deferred rendering on the server, or what that would mean. (I have very little experience with server rendering.) (edited)</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "0ca4f757-657c-4acf-b30a-546b2b0a68de",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:52 PM",
+      "msg": "<p>@matheus_gsilva<br />How the idea to create react suspense started and why?</p>\n",
+      "messages": [
+        {
+          "id": "d50a3d37-b824-423d-9b78-b4747f3b49d5",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:54 PM",
+          "msg": "<p>Hm! Good question. I&#39;m actually not...sure...when this first came up.</p>\n<p>I think it may have come about when Andrew, Flarnie, and I were working on updating react-relay to be async compatible. We realized there were a lot of obstacles and potential pitfalls and that async dependencies were going to be tricky to manage right. (See <a href=\"https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html\">https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html</a> for an example.)</p>\n<p>Then I think Andrew and Sebastian went off and brainstormed a bunch– staying really late at work one evening, if I recall– and the idea for throwing a Promise to indicate an async dependency came up. I vaguely remember them sharing that idea with us after a late night session. The rest was just iterating on that initial idea 🙂 (edited)</p>\n<p>reactjs.org</p>\n<p>Update on Async Rendering – React Blog</p>\n<p>For over a year, the React team has been working to implement asynchronous rendering. Last month during his talk at JSConf Iceland, Dan unveiled some of the exciting new possibilities async rendering unlocks . Now we’d like to share with you some of the lessons we’ve learned while working on these features, and some recipes to help prepare your components for async rendering when it launches. One of the biggest lessons we’ve learned is that some of our legacy component lifecycles tend to…</p>\n<p><a href=\"https://reactjs.org/logo-og.png\">https://reactjs.org/logo-og.png</a></p>\n",
+          "highlights": "async component components componente componentes react relay"
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "4639194e-efb4-440d-a8d5-e212e3f413ca",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:55 PM",
+      "msg": "<p>@gabriel.metalanguage<br />Do you think native ReasonML is the future for the React Native project? What are your thoughts on it?</p>\n",
+      "messages": [
+        {
+          "id": "7b008923-4b0b-453f-9692-8dcad98e721f",
+          "img": null,
+          "username": "bvaughn",
+          "time": "3:55 PM",
+          "msg": "<p>I don&#39;t know 😊 I&#39;ve actually never used ReasonML. Some teams at FB are using it, but I don&#39;t know if any of us yet knows what it will become.</p>\n<p>(Sorry! This is a crappy answer 🤪) (edited)</p>\n",
+          "highlights": "reasonml"
+        }
+      ],
+      "highlights": "native react reasonml"
+    },
+    {
+      "id": "5dd23ddd-ff19-42bf-8848-e1e66ecacc3a",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "3:56 PM",
+      "msg": "<p>No problem 😛</p>\n",
+      "messages": [
+        {
+          "id": "b0c6a33f-cc68-46f3-9a33-a61e0f45cca7",
+          "img": null,
+          "username": "matheus_gsilva",
+          "time": "3:56 PM",
+          "msg": "<p>And our last question</p>\n<p>@sibelius</p>\n<p>what about instead of throwing a promise, we could use async await functions, generator and async iterators for components? much like this package <a href=\"https://github.com/alexeyraspopov/react-coroutine\">https://github.com/alexeyraspopov/react-coroutine</a>?</p>\n<blockquote>\n<p>GitHub<br />alexeyraspopov/react-coroutine<br />Make your async components compact and descriptive by leveraging the power of the language features - alexeyraspopov/react-coroutine</p>\n</blockquote>\n",
+          "highlights": "async component components componente componentes github package packages pacote pacotes react"
+        },
+        {
+          "id": "f8ad06a6-b6a4-41f9-b584-5e3ee237c07a",
+          "img": null,
+          "username": "bvaughn",
+          "time": "4:01 PM",
+          "msg": "<p>Andrew or Sebastian would better answer this– but...</p>\n<p>I think the original inspiration came from algebraic effects:</p>\n<p><a href=\"https://twitter.com/sebmarkbage/status/941214259505119232\">https://twitter.com/sebmarkbage/status/941214259505119232</a></p>\n<p>Throwing a Promise was nice because there was a nice parallel in the way we handle other thrown values (errors). We could reuse alot of the same logic for matching thrown Promises with <code>Placeholders</code> that we use to match thrown errors with error boundaries.</p>\n<p>We were also able to add this without changing any of our existing APIs.</p>\n<p>Another nice advantage is that you can throw from deeply within the stack without having to change methods along the way. (For example, if we used a generator or an async function, each level of indirection would also have to use a generator or async function in order to work.) Throwing &quot;just works&quot; because of how JavaScript works. 🙂 (edited)</p>\n<p>Sebastian Markbåge@sebmarkbage</p>\n<p>Poor man&#39;s algebraic effects. <a href=\"https://gist.github.com/sebmarkbage/2c7acb6210266045050632ea611aebee\">https://gist.github.com/sebmarkbage/2c7acb6210266045050632ea611aebee</a></p>\n<p>TwitterDec 14th, 2017</p>\n",
+          "highlights": "async github javascript js"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "91ca8aa3-63bb-4647-8c83-c61498a697ac",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "4:01 PM",
+      "msg": "<p>Well, in the name of the brazilian react community, i thank you for being here today! Thank you so much for your time and attention!</p>\n",
+      "messages": [
+        {
+          "id": "5ea543b4-afc0-4b50-a2d1-6d964fc144af",
+          "img": null,
+          "username": "matheus_gsilva",
+          "time": "4:01 PM",
+          "msg": "<p>And now, we end our Q&amp;A with Brian Vaughn!</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "5ced8554-979d-4982-926a-23faa341f691",
+          "img": null,
+          "username": "bvaughn",
+          "time": "4:02 PM",
+          "msg": "<p>Thank you!</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "229d9095-a248-4e15-9129-71d3f9b3e1ab",
+      "img": null,
+      "username": "matheus_gsilva",
+      "time": "4:03 PM",
+      "msg": "<p>Valeu pessoal, pela participação</p>\n",
+      "messages": [],
+      "highlights": ""
+    }
+  ]
+}
