@@ -101,14 +101,14 @@
   },
   "messages": [
     {
-      "id": "1b2f3d5c-c165-4f65-8eb7-a96adf4eaeb5",
+      "id": "96529806-8994-4307-84f9-5ae0005635a0",
       "img": null,
       "username": "AndreiCalazans",
       "time": "0:00 PM",
       "msg": "<p>Do you think reasonML has potential to be more than just a compiled to JavaScript language? Can it become itself a language compiled directly to machine code or any other low level language?</p>\n",
       "messages": [
         {
-          "id": "d568c5c6-ec70-4e45-b9c4-aab7d45d963b",
+          "id": "d710340e-5981-4644-9fdf-c34417850313",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -119,14 +119,14 @@
       "highlights": "javascript js reasonml"
     },
     {
-      "id": "e3a916f5-0b28-4427-a347-166df2f55df6",
+      "id": "4e078e7e-d2bd-4238-b558-3c5a4ff6b5fd",
       "img": null,
       "username": "grsabreu",
       "time": "0:00 PM",
       "msg": "<p>Why should JS devs get into ReasonML if we have relatively easier options like TypeScript and Flow? What points Reason can offer that neither TS and Flow can&#39;t?</p>\n",
       "messages": [
         {
-          "id": "52aaf925-6ba3-4645-b1c4-46e26751b0b9",
+          "id": "5710f2cc-356d-4fc5-b959-4dc3225d80a7",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -137,14 +137,14 @@
       "highlights": "flow javascript js reasonml typescript"
     },
     {
-      "id": "882c5dfc-fe99-4dd8-ba3d-8245993a624c",
+      "id": "431253b7-f2d7-48cc-b434-183675bdb9fd",
       "img": null,
       "username": "sibelius",
       "time": "0:00 PM",
       "msg": "<p>Your talk &quot;Spectrum of Abstraction&quot; opened my mind about all the trade offs libraries/packages and frameworks have to decide when choosing an abstraction.</p>\n",
       "messages": [
         {
-          "id": "6bf6c7a7-7c38-485e-afae-7256b545580a",
+          "id": "31ff2ebe-09ee-4659-8c9c-544e731a36e3",
           "img": null,
           "username": "sibelius",
           "time": "0:00 PM",
@@ -152,7 +152,7 @@
           "highlights": ""
         },
         {
-          "id": "09744b93-bc58-42d1-ae3c-d26937327ca7",
+          "id": "2cf33b08-68fa-4c62-8fdb-52036f69bb62",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -163,14 +163,14 @@
       "highlights": "package packages pacote pacotes"
     },
     {
-      "id": "fce57f09-dd85-43f3-8782-d255bcdf8c97",
+      "id": "6e16688c-2b65-476a-b769-5a5305afc562",
       "img": null,
       "username": "Rafael Ramblas",
       "time": "0:00 PM",
       "msg": "<p>Why the functional approach to React? How this idea came to be and why OCaml was chosen to be the code base for the first Proof of Concept?</p>\n",
       "messages": [
         {
-          "id": "487aa006-2179-4d09-afd2-4d91a36ad840",
+          "id": "6f5dcbce-22cf-45fc-95c8-2b60376c4bde",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -181,14 +181,14 @@
       "highlights": "react"
     },
     {
-      "id": "c8bae11a-0ed5-4ea6-8a65-ca54a98e1cef",
+      "id": "af39452d-5926-4d05-b98f-a2525321bb6e",
       "img": null,
       "username": "guilhermedecampo",
       "time": "0:00 PM",
       "msg": "<p>What was the hardest problem you had to deal with lately?</p>\n",
       "messages": [
         {
-          "id": "10fc454c-f4d6-45d4-b3f2-c854528b8b4f",
+          "id": "dea667d6-9692-4ef4-9c46-14af9cbfeac6",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -199,14 +199,14 @@
       "highlights": ""
     },
     {
-      "id": "14d08184-6b1b-49f9-ba6e-393310501719",
+      "id": "0b5e4ae7-dd18-4c3f-a8b9-fd8016a35d8d",
       "img": null,
       "username": "PlayMa256",
       "time": "0:00 PM",
       "msg": "<p>Why OCaml was only known and used in the academic environment?</p>\n",
       "messages": [
         {
-          "id": "0cb72c9b-ef17-4b32-9d34-a4fb85f5c5ac",
+          "id": "dcf108e1-dfb7-41e0-9d2b-b5e32833e811",
           "img": null,
           "username": "PlayMa256",
           "time": "0:00 PM",
@@ -214,7 +214,7 @@
           "highlights": ""
         },
         {
-          "id": "5e602e74-5360-48f1-b394-3fefe2ccc3a6",
+          "id": "f79dd270-2038-4330-8e6d-e55ec0f41725",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -225,14 +225,14 @@
       "highlights": ""
     },
     {
-      "id": "48054d8c-bc14-4198-91cc-fef2067722d7",
+      "id": "0850d3b5-5dca-4261-9b32-d903e9920859",
       "img": null,
       "username": "andrei_calazans",
       "time": "0:00 PM",
       "msg": "<p>As for mid-2018 is it safe to start a to production project with ReasonML, will my company still face some difficulties with its adoption? (edited)</p>\n",
       "messages": [
         {
-          "id": "a78acb7c-310a-44a4-ab67-ebe966707cdb",
+          "id": "96f9da82-03a0-4ca8-bbfd-a9be3df353d1",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -243,14 +243,14 @@
       "highlights": "reasonml"
     },
     {
-      "id": "f6e77f54-3b9d-4839-a32e-ddb179d0c7cb",
+      "id": "232cf5a9-a4e6-4fd0-b6f7-e6b093abe4d3",
       "img": null,
       "username": "grsabreu",
       "time": "0:00 PM",
       "msg": "<p>Are there any plans to provide an official Relay-like GraphQL client for Reason as an approach to get more people using it?</p>\n",
       "messages": [
         {
-          "id": "65f5aa84-bbb2-4c3e-8574-0569f49544de",
+          "id": "c277131d-dda1-442d-b90d-25772e7f3586",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -261,14 +261,14 @@
       "highlights": "graphql relay"
     },
     {
-      "id": "e7445202-af10-477b-85de-eb1114bc1bd7",
+      "id": "c92961d5-21a8-4744-8cdb-603b6d30f516",
       "img": null,
       "username": "Raphael Thomazella",
       "time": "0:00 PM",
       "msg": "<p>How essential is math for a person to work at the industry nowadays? E.g. Can I get by with poor math skills?</p>\n",
       "messages": [
         {
-          "id": "18490c64-1bc1-48a9-be3e-6c91320f4bb1",
+          "id": "24d6f859-c9e9-4497-942a-cb093c9051ff",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -279,14 +279,14 @@
       "highlights": ""
     },
     {
-      "id": "70398284-e987-46b4-94bd-7e3d8f888a0a",
+      "id": "87337662-21c2-4f56-bab2-4fd4bb5b0f12",
       "img": null,
       "username": "haz",
       "time": "0:00 PM",
       "msg": "<p>What&#39;s the thing you like the most about working at Facebook?</p>\n",
       "messages": [
         {
-          "id": "831532a9-c6e3-44bf-bf2a-1da5e6eb92f3",
+          "id": "303d2ee9-9006-4d46-9af0-316b1427b9fe",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -297,14 +297,14 @@
       "highlights": ""
     },
     {
-      "id": "f2b139dd-b7b2-4a1a-bf63-bcbe5c51b38d",
+      "id": "ae28a3f6-8ba8-4b01-b689-1db22599acca",
       "img": null,
       "username": "Raphael Thomazella",
       "time": "0:00 PM",
       "msg": "<p>How was the process of making a programming language?</p>\n",
       "messages": [
         {
-          "id": "9a4ab356-3525-480a-aa48-73c0eb7ae7ab",
+          "id": "4ce2d985-6490-413a-8e19-7dba79bb71cf",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -315,14 +315,14 @@
       "highlights": ""
     },
     {
-      "id": "0accac84-c2ca-47c4-93d9-03a26ce30c42",
+      "id": "c7c30ee9-0e75-49f7-b13f-9f654e2e9d04",
       "img": null,
       "username": "haz",
       "time": "0:00 PM",
       "msg": "<p>How did you learn English and French? Do you have another language you would like to learn?</p>\n",
       "messages": [
         {
-          "id": "e0676d3e-3c5b-42ee-b611-2e5c106ce32d",
+          "id": "2527d792-cdac-447d-bdda-d47eb0924658",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -333,14 +333,14 @@
       "highlights": ""
     },
     {
-      "id": "201f018f-b842-485a-89e3-160b3d8e0938",
+      "id": "5162d3ff-d4a6-4f48-9b42-f14c2634f632",
       "img": null,
       "username": "sibelius",
       "time": "0:00 PM",
       "msg": "<p>Will Reason have support to generators, async await, async generators and other async sugars syntaxes?</p>\n",
       "messages": [
         {
-          "id": "69932769-ab5b-4b34-9c19-c1924fefdc93",
+          "id": "7f143e85-e94b-4eaa-8009-edaba5a3e9ba",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
@@ -351,14 +351,14 @@
       "highlights": "async"
     },
     {
-      "id": "8e2fb809-41f9-487b-a64a-e52072e09e6e",
+      "id": "f7c3f79a-3391-4196-b51d-752678b6787f",
       "img": null,
       "username": "gabriel.metalanguage",
       "time": "3:51 PM",
       "msg": "<p>Last question, would you consider coming to React Brasil Conf in 2019? All Brazilian React devs would love to see you giving a talk</p>\n",
       "messages": [
         {
-          "id": "771aca00-03e8-40b6-a5da-a05534ee688a",
+          "id": "dd363c9b-adea-40e3-bb4f-6a9824408364",
           "img": null,
           "username": "chenglou",
           "time": "0:00 PM",
