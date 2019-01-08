@@ -1,0 +1,372 @@
+{
+  "info": {
+    "details": "",
+    "highlights": {
+      "javascript": {
+        "count": 5,
+        "synonymous": [
+          "javascript",
+          "js"
+        ]
+      },
+      "async": {
+        "count": 4,
+        "synonymous": [
+          "async"
+        ]
+      },
+      "react": {
+        "count": 3,
+        "synonymous": [
+          "react"
+        ]
+      },
+      "reasonml": {
+        "count": 3,
+        "synonymous": [
+          "reasonml"
+        ]
+      },
+      "flow": {
+        "count": 2,
+        "synonymous": [
+          "flow"
+        ]
+      },
+      "relay": {
+        "count": 2,
+        "synonymous": [
+          "relay"
+        ]
+      },
+      "github": {
+        "count": 2,
+        "synonymous": [
+          "github"
+        ]
+      },
+      "package": {
+        "count": 2,
+        "synonymous": [
+          "package",
+          "packages",
+          "pacote",
+          "pacotes"
+        ]
+      },
+      "backend": {
+        "count": 1,
+        "synonymous": [
+          "backend"
+        ]
+      },
+      "native": {
+        "count": 1,
+        "synonymous": [
+          "native"
+        ]
+      },
+      "graphql": {
+        "count": 1,
+        "synonymous": [
+          "graphql"
+        ]
+      },
+      "typescript": {
+        "count": 1,
+        "synonymous": [
+          "typescript"
+        ]
+      },
+      "web": {
+        "count": 1,
+        "synonymous": [
+          "web"
+        ]
+      }
+    },
+    "authors": [
+      "AndreiCalazans",
+      "PlayMa256",
+      "Rafael Ramblas",
+      "Raphael Thomazella",
+      "andrei_calazans",
+      "chenglou",
+      "gabriel.metalanguage",
+      "grsabreu",
+      "guilhermedecampo",
+      "haz",
+      "sibelius"
+    ]
+  },
+  "messages": [
+    {
+      "id": "96529806-8994-4307-84f9-5ae0005635a0",
+      "img": null,
+      "username": "AndreiCalazans",
+      "time": "0:00 PM",
+      "msg": "<p>Do you think reasonML has potential to be more than just a compiled to JavaScript language? Can it become itself a language compiled directly to machine code or any other low level language?</p>\n",
+      "messages": [
+        {
+          "id": "d710340e-5981-4644-9fdf-c34417850313",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>We already compile to machine code! 😃 That&#39;s how Reason started. But since compiling to JS gets us a bigger crowd, here we are. I won&#39;t get into details, but if you look at e.g. <a href=\"https://github.com/bsansouci/bucklescript\">https://github.com/bsansouci/bucklescript</a>, you can basically make your pure Reason project to compile to assembly without many changes</p>\n<blockquote>\n<p>GitHub<br />bsansouci/bucklescript<br />A backend for the OCaml compiler which emits JavaScript. - bsansouci/bucklescript</p>\n</blockquote>\n",
+          "highlights": "backend github javascript js"
+        }
+      ],
+      "highlights": "javascript js reasonml"
+    },
+    {
+      "id": "4e078e7e-d2bd-4238-b558-3c5a4ff6b5fd",
+      "img": null,
+      "username": "grsabreu",
+      "time": "0:00 PM",
+      "msg": "<p>Why should JS devs get into ReasonML if we have relatively easier options like TypeScript and Flow? What points Reason can offer that neither TS and Flow can&#39;t?</p>\n",
+      "messages": [
+        {
+          "id": "5710f2cc-356d-4fc5-b959-4dc3225d80a7",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>Until you try a &quot;sound&quot; type system, you wouldn&#39;t realize that most other type systems fall into an uncanny valley of static typing. By &quot;sound&quot;, we usually mean &quot;it&#39;ll be 100% correct&quot;, <em>not</em> a heuristics, but a guarantee. This is subtle, but drastically changes how you think and use the types.</p>\n<p>If you hover over a type in Reason and it says &quot;number&quot;, it&#39;ll <em>definitely</em> be a number, not &quot;maybe a number, maybe undefined, etc&quot;. That&#39;s one thing. The other thing is, we&#39;ve got one of the fastest build pipeline in the world. One of our codebases has 1k files and it compiles in under 2s, fresh build. Type inference is still immediate. No such thing as save -&gt; wait minutes -&gt; check for errors</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "flow javascript js reasonml typescript"
+    },
+    {
+      "id": "431253b7-f2d7-48cc-b434-183675bdb9fd",
+      "img": null,
+      "username": "sibelius",
+      "time": "0:00 PM",
+      "msg": "<p>Your talk &quot;Spectrum of Abstraction&quot; opened my mind about all the trade offs libraries/packages and frameworks have to decide when choosing an abstraction.</p>\n",
+      "messages": [
+        {
+          "id": "31ff2ebe-09ee-4659-8c9c-544e731a36e3",
+          "img": null,
+          "username": "sibelius",
+          "time": "0:00 PM",
+          "msg": "<p>What powerful abstractions have you seen that changed your mind? (edited)</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "2cf33b08-68fa-4c62-8fdb-52036f69bb62",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>Some of the recent improvements in machine learning really made me stop and wonder what I&#39;m doing as engineer, lol. On top of my mind, there&#39;s also <a href=\"https://www.youtube.com/watch?v=xnez6tloNSQ\">https://www.youtube.com/watch?v=xnez6tloNSQ</a> recently and <a href=\"https://www.youtube.com/watch?v=iWa4t9oa5zw&amp;feature=youtu.be&amp;t=1972\">https://www.youtube.com/watch?v=iWa4t9oa5zw&amp;feature=youtu.be&amp;t=1972</a>. And as always, I recommend you to check everything by <a href=\"http://worrydream.com\">http://worrydream.com</a> (edited)</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "package packages pacote pacotes"
+    },
+    {
+      "id": "6e16688c-2b65-476a-b769-5a5305afc562",
+      "img": null,
+      "username": "Rafael Ramblas",
+      "time": "0:00 PM",
+      "msg": "<p>Why the functional approach to React? How this idea came to be and why OCaml was chosen to be the code base for the first Proof of Concept?</p>\n",
+      "messages": [
+        {
+          "id": "6f5dcbce-22cf-45fc-95c8-2b60376c4bde",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>It was SML at first, then OCaml.</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "react"
+    },
+    {
+      "id": "af39452d-5926-4d05-b98f-a2525321bb6e",
+      "img": null,
+      "username": "guilhermedecampo",
+      "time": "0:00 PM",
+      "msg": "<p>What was the hardest problem you had to deal with lately?</p>\n",
+      "messages": [
+        {
+          "id": "dea667d6-9692-4ef4-9c46-14af9cbfeac6",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>That hits close to home... not one problem but a few dozen. I worry about the future of computing, etc. But more on that another time I guess</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "0b5e4ae7-dd18-4c3f-a8b9-fd8016a35d8d",
+      "img": null,
+      "username": "PlayMa256",
+      "time": "0:00 PM",
+      "msg": "<p>Why OCaml was only known and used in the academic environment?</p>\n",
+      "messages": [
+        {
+          "id": "dcf108e1-dfb7-41e0-9d2b-b5e32833e811",
+          "img": null,
+          "username": "PlayMa256",
+          "time": "0:00 PM",
+          "msg": "<p>Are there any particular reasons for it to not had became a &quot;mainstream&quot; language?</p>\n",
+          "highlights": ""
+        },
+        {
+          "id": "f79dd270-2038-4330-8e6d-e55ec0f41725",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>Well, every language starts obscure, right? Arguably OCaml is taking longer than most. Simply speaking, the timing wasn&#39;t right until recently.</p>\n<p>There wasn&#39;t even a package management story until a few years ago, etc. And front-end folks were unfamiliar with types back then too. And then no such thing as BuckleScript existed. It took a while for the window of opportunities to align</p>\n",
+          "highlights": "package packages pacote pacotes"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "0850d3b5-5dca-4261-9b32-d903e9920859",
+      "img": null,
+      "username": "andrei_calazans",
+      "time": "0:00 PM",
+      "msg": "<p>As for mid-2018 is it safe to start a to production project with ReasonML, will my company still face some difficulties with its adoption? (edited)</p>\n",
+      "messages": [
+        {
+          "id": "96f9da82-03a0-4ca8-bbfd-a9be3df353d1",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>The learning curve&#39;s still there; but if you&#39;ve got a Reason person who knows the in and out of things, there&#39;s not much that&#39;s not achievable.</p>\n<p>BuckleScript&#39;s interop system is featureful, to say the least, so you usually know that you can bind to everything you need. Definitely do the JS track; the native track is still experimental (edited)</p>\n",
+          "highlights": "javascript js native"
+        }
+      ],
+      "highlights": "reasonml"
+    },
+    {
+      "id": "232cf5a9-a4e6-4fd0-b6f7-e6b093abe4d3",
+      "img": null,
+      "username": "grsabreu",
+      "time": "0:00 PM",
+      "msg": "<p>Are there any plans to provide an official Relay-like GraphQL client for Reason as an approach to get more people using it?</p>\n",
+      "messages": [
+        {
+          "id": "c277131d-dda1-442d-b90d-25772e7f3586",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>not currently, as messenger doesn&#39;t use Relay. If you&#39;re getting started with Reason, I highly recommend not trying all the pieces at the same time. You&#39;ll dissuade your coworkers and lose your chance of convincing them lol</p>\n<p>By the way, follow the spectrum of abstraction! Start with the most concrete thing you can propose to coworkers, e.g. &quot;I can write this particular piece of our product better&quot;. Don&#39;t start with the most abstract &quot;lemme tell you all about the functional paradigm&quot;. Everyone who starts with the latter has failed so far. Think about why, in terms of abstractions vs concretization. It&#39;s just a bad way of selling your pitch to start at the most abstract proposition...</p>\n<p>The most successful Reason conversions we&#39;ve had are during Reason meetups where we gathered folks together to make e.g. a game or a small app. The moment you start preaching some monadic whatever, you&#39;ve lost the interest of most newcomers/coworkers. (edited)</p>\n",
+          "highlights": "relay"
+        }
+      ],
+      "highlights": "graphql relay"
+    },
+    {
+      "id": "c92961d5-21a8-4744-8cdb-603b6d30f516",
+      "img": null,
+      "username": "Raphael Thomazella",
+      "time": "0:00 PM",
+      "msg": "<p>How essential is math for a person to work at the industry nowadays? E.g. Can I get by with poor math skills?</p>\n",
+      "messages": [
+        {
+          "id": "24d6f859-c9e9-4497-942a-cb093c9051ff",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>Front-end dev basically requires no math at this point, which isn&#39;t a bad thing, since people of all walks of life can create now. But if you&#39;re doing this professionally, I do recommend you to at least look into the proper computer science stuff, e.g. classic data structures &amp; runtime analysis. Again, think of the spectrum of abstractions: do you need math/CS right now to ship your web app? Likely not. Do you need it to jump into a related software domain you couldn&#39;t have otherwise? Probably.</p>\n<p>There are definitely some more CS/Math-y domains such as crypto, machine learning, and anything low-level. I&#39;d say don&#39;t be uncomfortable not knowing the theory, but make sure you do learn some so that you don&#39;t get stuck writing the same webapp in ten years.</p>\n<p>Here&#39;s my recommendation to get started (I know this works because that&#39;s how I got started): read about some simple but non-trivial data structures like binary tree, and implement one yourself. Then do it for hash map, heap, trie. One day when folks are talking about things one abstraction level lower than what you&#39;re programming in, you&#39;ll suddenly start to realize things and connect concepts. It&#39;s an exciting feeling.</p>\n<p>You&#39;re literally &quot;powerful&quot; once you learn proper CS. Folks usually counter that with the argument &quot;yeah but it&#39;s not needed for what I&#39;m doing right now&quot;, which is really talking beside the point if you think about it regarding abstraction spectrum. I think &quot;it&#39;s not needed for what I&#39;m doing&quot; is actually a <em>great</em> stance, as it prevents over-engineering, which is pretty much the root of all evil (the Reason community tries really hard not to reach for overly powerful and un-useful patterns like monads and other type-level tricks). But it has to be a learned, carefully understood stance, not an argument to defend your temporary ignorance. (edited)</p>\n",
+          "highlights": "web"
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "87337662-21c2-4f56-bab2-4fd4bb5b0f12",
+      "img": null,
+      "username": "haz",
+      "time": "0:00 PM",
+      "msg": "<p>What&#39;s the thing you like the most about working at Facebook?</p>\n",
+      "messages": [
+        {
+          "id": "303d2ee9-9006-4d46-9af0-316b1427b9fe",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>You&#39;re the average of your coworkers, so it&#39;s nice to be around smart, passionate coworkers. Being around great folks is probably the best thing you can do for your career, so definitely do seek these folks out. You have internet, so you can reach out to a big pool of folks whenever you want now. Use it</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "ae28a3f6-8ba8-4b01-b689-1db22599acca",
+      "img": null,
+      "username": "Raphael Thomazella",
+      "time": "0:00 PM",
+      "msg": "<p>How was the process of making a programming language?</p>\n",
+      "messages": [
+        {
+          "id": "4ce2d985-6490-413a-8e19-7dba79bb71cf",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>I wouldn&#39;t know, since we started with taking an existing one and tweak the edges as we saw fit. I&#39;m very close to folks who created languages though; if it&#39;s to get work done, then forget about it right now, because you won&#39;t get any useful work done by starting with creating your own language lol. It&#39;s akin to &quot;let&#39;s create a game engine before starting our game!&quot;. You never come back writing your product.</p>\n<p>If it&#39;s just for fun: you&#39;d still start with a concrete goal, but a goal that&#39;s concrete relative to creating said language, e.g. &quot;I wanna see if I can implement a few type system feature&quot; or &quot;I wonder if I can make these optimizations or explore these new paradigms&quot;. Honestly, I&#39;m always tracking new interesting languages, but it&#39;s not my main interest. My main interest is getting the job done 😃</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "c7c30ee9-0e75-49f7-b13f-9f654e2e9d04",
+      "img": null,
+      "username": "haz",
+      "time": "0:00 PM",
+      "msg": "<p>How did you learn English and French? Do you have another language you would like to learn?</p>\n",
+      "messages": [
+        {
+          "id": "2527d792-cdac-447d-bdda-d47eb0924658",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>I&#39;m Chinese and immigrated to Montreal, Canada. Montreal&#39;s official language is French. Every Chinese friend I have there are at least trilingual; it definitely sounds impressive to some folks!</p>\n<p>My school also taught Latin, and I learned a bit of Spanish by myself. But use or it lose it. And I lost these two.</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": ""
+    },
+    {
+      "id": "5162d3ff-d4a6-4f48-9b42-f14c2634f632",
+      "img": null,
+      "username": "sibelius",
+      "time": "0:00 PM",
+      "msg": "<p>Will Reason have support to generators, async await, async generators and other async sugars syntaxes?</p>\n",
+      "messages": [
+        {
+          "id": "7f143e85-e94b-4eaa-8009-edaba5a3e9ba",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>Generators will be hard; not thinking about it atm. Async/await, likely. This topic has been delayed for a long time now, because we just still don&#39;t think Promises is the way to go for us (perf, semantics, bike shedding, flexibility). We&#39;re thinking about it mostly for the interop purposes.</p>\n",
+          "highlights": "async"
+        }
+      ],
+      "highlights": "async"
+    },
+    {
+      "id": "f7c3f79a-3391-4196-b51d-752678b6787f",
+      "img": null,
+      "username": "gabriel.metalanguage",
+      "time": "3:51 PM",
+      "msg": "<p>Last question, would you consider coming to React Brasil Conf in 2019? All Brazilian React devs would love to see you giving a talk</p>\n",
+      "messages": [
+        {
+          "id": "dd363c9b-adea-40e3-bb4f-6a9824408364",
+          "img": null,
+          "username": "chenglou",
+          "time": "0:00 PM",
+          "msg": "<p>I haven&#39;t decided yet, but thanks for the invitation! 😃</p>\n",
+          "highlights": ""
+        }
+      ],
+      "highlights": "react"
+    }
+  ]
+}
